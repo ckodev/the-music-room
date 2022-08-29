@@ -21,6 +21,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
+			the_title('<h1 class="page-title">', '</h1>');
 		
 		endwhile; // End of the loop.
 		?>
