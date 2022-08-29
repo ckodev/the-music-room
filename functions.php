@@ -49,7 +49,8 @@ function tmr_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'tmr' ),
+			'header' => esc_html__( 'header', 'tmr' ),
+			'footer' => esc_html__( 'footer', 'tmr' ),
 		)
 	);
 
@@ -148,6 +149,20 @@ function tmr_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tmr_scripts' );
+
+/**
+ * Remove Block Editor from Pages
+ */
+function tmr_post_filter( $use_block_editor, $post ) {
+    // Change the integer in array to your Page ID
+    $page_ids = array( 11, 34, 20, 3, 31 );
+    if ( in_array( $post->ID, $page_ids ) ) {
+        return false;
+    } else {
+        return $use_block_editor;
+    }
+}
+add_filter( 'use_block_editor_for_post', 'tmr_post_filter', 10, 2 );
 
 /**
  * Implement the Custom Header feature.
