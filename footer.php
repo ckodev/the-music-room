@@ -13,6 +13,10 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
+				<nav class="footer-menu">
+					<?php wp_nav_menu(array('theme_location' => 'footer')) ; ?>
+				</nav>
+		
 	
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
