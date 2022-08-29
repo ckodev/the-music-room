@@ -13,17 +13,12 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'tmr' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'tmr' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
+	
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tmr' ), 'tmr', '<a href="http://ckodev.com">ckodev</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tmr' ), 'The Music Room', '<a href="http://ckodev.com">ckodev</a>' );
 				?>
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
