@@ -35,6 +35,11 @@
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
 
+		const mql = window.matchMedia('(max-width: 1024px)');
+				mql.onchange = (e) => { 
+					siteNavigation.classList.toggle( 'toggled' );
+				}
+
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 
