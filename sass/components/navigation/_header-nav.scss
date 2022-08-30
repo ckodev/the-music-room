@@ -26,7 +26,7 @@
     }
 
     .page-title {
-        color: white;
+        color: $tmr-white;
     }
 
     .site-branding {
@@ -39,7 +39,7 @@
         .line {
             width: 35px;
             height: 2px;
-            background-color: White;
+            background-color: $tmr-white;
             display: block;
             margin: 8px auto;
             transition: all 0.3s ease-in-out;
@@ -49,11 +49,11 @@
             }
             &:nth-child(1).active-burger{
                 transform: translateY(10px) rotate(45deg);
-                background-color: $fan-yellow;
+                background-color: $tmr-offwhite;
             }
             &:nth-child(3).active-burger{
                 transform: translateY(-10px) rotate(-45deg);
-                background-color: $fan-yellow;
+                background-color: $tmr-white;
             }
         }  
     }
@@ -89,7 +89,7 @@
             }
 
             a {
-                color: $color__nav-link;
+                color: $tmr-white;
 
                 @include medScreenQuery {
                   
@@ -97,7 +97,7 @@
                 }
 
                 &:hover {
-                    color: $color__nav-link-hover;
+                    color: $tmr-hover;
                 }
             }
         }
@@ -133,11 +133,12 @@
         display: block;
         position: absolute;
         left: 0;
-        right: 0;
-        top: 0;
+        right: 5rem;
+        top: 5rem;
+        background-color: black;
         z-index: 80;
         width: 100%;
-        background-color: $color__header-background;
+        background-color: $black;
         padding: 7rem 2rem 2rem;
 
 		@include desktopQuery {
@@ -156,7 +157,7 @@
         li {
             font-size: 2rem;
             a {
-                color: $color__nav-link;
+                color: $white;
 
                 &:hover {
                     color: $color__nav-link-hover;
