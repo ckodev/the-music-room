@@ -20,8 +20,9 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-		
 
+			get_template_part( 'template-parts/page-hero' );
+	
 		$args = array(  
 				'post_type' 	 => 'tmr-client',
 				'post_status'    => 'publish',
