@@ -37,8 +37,27 @@
 
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
+
+			let burger = document.getElementsByClassName('line');
+			for(let i = 0, length = burger.length; i < length; i++) {
+			   if( burger[i].classList.contains('active-burger')){
+				burger[i].classList.remove('active-burger')
+			   } else if (burger[i].classList.contains('line')) {
+				burger[i].classList.add('active-burger')
+			   }
+			};
+
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
+
+			let burger = document.getElementsByClassName('line');
+			for(let i = 0, length = burger.length; i < length; i++) {
+			   if( burger[i].classList.contains('active-burger')){
+				burger[i].classList.remove('active-burger')
+			   } else if (burger[i].classList.contains('line')) {
+				burger[i].classList.add('active-burger')
+			   }
+			};
 		}
 	} );
 
