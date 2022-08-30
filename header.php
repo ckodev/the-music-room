@@ -27,14 +27,12 @@
 
 	<header id="masthead" class="site-header">
 		
-
-		
 		<nav id="site-navigation" class="main-navigation">
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
 				?>
-				<a href="<?php echo esc_url( get_page_link( 31 ) ); ?>"><h1 class="page-title"><?php the_title(); ?></h1></a>
+				<a href="<?php echo esc_url( get_page_link( 31 ) ); ?>"><h1 class="page-title screen-reader-text"><?php the_title(); ?></h1></a>
 			</div><!-- .site-branding -->
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 				<?php esc_html_e( '', 'tmr' ); ?>
