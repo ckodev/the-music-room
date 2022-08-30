@@ -1,10 +1,36 @@
 .hero-container {
     position: relative;
 
+    img {
+      width: 100%;
+      min-height: 35rem;
+      object-fit: cover;
+      object-position: 30% 50%;
+    }
+    
+    h2 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: $tmr-white;
+      font-size: 1rem;
+    }
+
     .page-title {
         position: absolute;
         bottom: 8px;
         left: 16px;
-        color: white;
+        color: $tmr-white;
       }
+}
+
+.featured-image-section {
+
+  img {
+    width: 100%;
+    min-height: 35rem;
+    object-fit: cover;
+    object-position: 30% 50%;
+  }
+
 }
