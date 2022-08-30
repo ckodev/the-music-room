@@ -20,115 +20,162 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
-			?>
-				<div class="hero-container">
-					<?php 
-					$feat_image_url = wp_get_attachment_url( get_post_thumbnail_id() );
-					$image_id = get_post_thumbnail_id();
-					$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
-					?> 
-					<img src="<?php echo $feat_image_url; ?>" alt="<?php echo $image_alt; ?>">
-					
-				</div>
-				
-			<?php
+
+			get_template_part( 'template-parts/page-hero' );
 
 			if (function_exists('get_fields')) :
 
-				if (get_field('hero_text')) {
-					?>
-					<h2><?php the_field('hero_text'); ?></h2>
-					<?php
-				}
-
 				// Bio Section ****************************************//
 				// ****************************************************//
-				if (get_field('bio_heading')) {
+				?>
+				<section class="bio-section">
+					<article class="bio-text-container">
+					<?php
+						if (get_field('bio_heading')) {
+							?>
+							<h3><?php the_field('bio_heading'); ?></h3>
+							<?php
+						}
+						if (get_field('bio')) {
+							?>
+							<p><?php the_field('bio'); ?></p>
+							<?php
+						}
 					?>
-					<h3><?php the_field('bio_heading'); ?></h3>
+					</article>
+				
+					<article class="bio-image-container">
 					<?php
-				}
-				if (get_field('bio')) {
+					if (get_field('bio_image')) {
+							$image = get_field('bio_image');
+							if( !empty($image) ): ?>
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+							<?php endif; ?>
+						<?php
+					}
 					?>
-					<p><?php the_field('bio'); ?></p>
-					<?php
-				}
-				if (get_field('bio_image')) {
-						$image = get_field('bio_image');
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-						<?php endif; ?>
-					<?php
-				}
+					</article>
+				</section>
+				<?php
+
 				// Featured Image One *********************************//
 				// ****************************************************//
-				if (get_field('featured_image_one')) {
-						$image = get_field('featured_image_one');
-						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-						<?php endif; ?>
-					<?php
-				}
+				?>
+				<section class="featured-image-section">
+					<article class="featured-image">
+						<?php
+						if (get_field('featured_image_one')) {
+								$image = get_field('featured_image_one');
+								if( !empty($image) ): ?>
+									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+								<?php endif; ?>
+							<?php
+						}
+						?>
+					</article>
+				</section>
+				<?php
 				// Clients Section ************************************//
 				// ****************************************************//
-				if (get_field('clients_heading')) {
-					?>
-					<h3><?php the_field('clients_heading'); ?></h3>
-					<?php
-				}
-				if (get_field('client_text')) {
-					?>
-					<p><?php the_field('client_text'); ?></p>
-					<?php
-				}
-				$posts = get_field('clients');
-				if( $posts ): ?>
-						<ul>
-							<?php foreach( $posts as $post ): ?>
-								<li>
-									<a href="#">
-										<h3><?php the_title(); ?></h3>
-										<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-									</a>
-								</li>
-							<?php endforeach; ?>
-						</ul>
-					<?php 
-				endif; 
-				wp_reset_postdata();
+				?>
+				<section class="clients-section">
+					<article class="clients-text-container">
+						<?php
+						if (get_field('clients_heading')) {
+							?>
+							<h3><?php the_field('clients_heading'); ?></h3>
+							<?php
+						}
+						if (get_field('client_text')) {
+							?>
+							<p><?php the_field('client_text'); ?></p>
+							<?php
+						}
+						?>
+					</article>
+
+					<article class="clients-examples-container">
+						<?php
+						$posts = get_field('clients');
+						if( $posts ): ?>
+								<ul>
+									<?php foreach( $posts as $post ): ?>
+										<li>
+											<a href="#">
+												<h3><?php the_title(); ?></h3>
+												<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
+											</a>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							<?php 
+						endif; 
+						wp_reset_postdata();
+						?>
+					</article>
+				</section>
+				<?php
 
 				// Featured Image Two *********************************//
 				// ****************************************************//
-				if (get_field('featured_image_two')) {
-					$image = get_field('featured_image_two');
-					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-					<?php endif; ?>
+				?>
+				<section class="featured-image-section">
+					<article class="featured-image">
+					<?php
+					if (get_field('featured_image_two')) {
+						$image = get_field('featured_image_two');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+						<?php endif; ?>
+					<?php
+					?>
+					</article>
+				</section>
 				<?php
-
 				// Contact Form Section *******************************//
 				// ****************************************************//
-				if (get_field('contact_heading')) {
-					?>
-					<h3><?php the_field('contact_heading'); ?></h3>
+				?>
+				<section class="contact-form-section">
+					<article class="contact-text-container">
 					<?php
-				}
-				if (get_field('contact_text')) {
+					if (get_field('contact_heading')) {
+						?>
+						<h3><?php the_field('contact_heading'); ?></h3>
+						<?php
+					}
+					if (get_field('contact_text')) {
+						?>
+						<p><?php the_field('contact_text'); ?></p>
+						<?php
+					}
 					?>
-					<p><?php the_field('contact_text'); ?></p>
+					</article>
+
+					<article class="form-container">
 					<?php
-				}
-				echo do_shortcode('[wpforms id="90"]'); 
+					echo do_shortcode('[wpforms id="90"]'); 
+					?>
+					</article>
+				</section>
+				<?php
 
 				// Featured Image Three *******************************//
 				// ****************************************************//
-				if (get_field('featured_image_three')) {
-					$image = get_field('featured_image_three');
-					if( !empty($image) ): ?>
-						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-					<?php endif; ?>
+				?>
+				<section class="featured-image-section">
+					<article class="featured-image">
+					<?php
+					if (get_field('featured_image_three')) {
+						$image = get_field('featured_image_three');
+						if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+						<?php endif; ?>
+					<?php
+					}
+					?>
+					</article>
+				</section>
 				<?php
-				}
 			}
 	
 			endif;
