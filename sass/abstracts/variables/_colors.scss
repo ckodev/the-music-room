@@ -18,3 +18,62 @@ $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+
+// FANDOMONIUM COLORS
+$fan-black: #131516;
+$fan-white: #fff;
+$fan-offwhite: #F1F1F1;
+$fan-teal: #2DB1B1;
+$fan-teal-faded: #2db1b188;
+$fan-yellow: #FFCF55;
+$fan-yellow-faded: #ffcf5588;
+
+
+// COLORS
+$color__main-accent: $fan-teal;
+$color__second-accent: $fan-yellow;
+
+$color__background-body: $fan-white;
+$color__background-screen: $fan-offwhite;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__alert-success: $fan-yellow-faded;
+$color__alert-message: $fan-teal-faded;
+
+$color__schedule-day1: $fan-teal-faded;
+$color__schedule-day2: $fan-yellow-faded;
+
+// TYPOGRAPHY COLORS
+$color__text-main: $fan-black;
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__hero-img-title: $color__main-accent;
+
+
+// HEADER & FOOTER RELATED
+$color__header-background: #000;
+$color__header-accent: $color__second-accent;
+
+$color__footer-background: #000;
+$color__footer-accent: $color__second-accent;
+
+$color__nav-link: black;
+$color__nav-link-hover: $color__main-accent;
+
+
+// LINK & BUTTON COLORS
+$color__link: #303030;
+$color__link-hover: $color__main-accent;
+$color__link-visited: $color__text-main;
+$color__button-background: $color__background-body; // default button background
+$color__button-secondary-background: $fan-yellow;
+$color__button-background-hover: $fan-black; // button background on hover
+$color__button-border: $color__main-accent; // button border
+$color__button-border-hover: $fan-black; // button border invert
+$color__button-text: $color__text-main; // text inside default button
+$color__button-text-hover: $color__background-body; // button hover text
+$color__border-input: #ccc;

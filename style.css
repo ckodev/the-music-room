@@ -388,7 +388,7 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
+	color: #131516;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -458,6 +458,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
+	position: relative;
 	background: #fff;
 }
 
@@ -519,13 +520,13 @@ table {
 /* Links
 --------------------------------------------- */
 a {
-	color: #4169e1;
+	color: #303030;
 }
 a:visited {
-	color: #800080;
+	color: #131516;
 }
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #2DB1B1;
 }
 a:focus {
 	outline: thin dotted;
@@ -696,6 +697,148 @@ textarea {
 	flex: 1 0 50%;
 }
 
+.main-navigation {
+	position: absolute;
+	z-index: 100;
+	justify-content: space-between;
+	display: flex;
+	flex-grow: 1;
+}
+@media (min-width: 48em) {
+	.main-navigation {
+		width: 100%;
+	}
+}
+.main-navigation .custom-logo {
+	width: 4rem;
+}
+.main-navigation .custom-logo-link {
+	width: 6rem;
+	align-self: center;
+}
+.main-navigation .custom-logo-link img {
+	width: 100%;
+}
+.main-navigation .page-title {
+	color: white;
+}
+.main-navigation .site-branding {
+	display: flex;
+}
+.main-navigation .hamburger-icon .line {
+	width: 35px;
+	height: 2px;
+	background-color: White;
+	display: block;
+	margin: 8px auto;
+	transition: all 0.3s ease-in-out;
+}
+.main-navigation .hamburger-icon .line:nth-child(2).active-burger {
+	width: 0;
+}
+.main-navigation .hamburger-icon .line:nth-child(1).active-burger {
+	transform: translateY(10px) rotate(45deg);
+	background-color: #FFCF55;
+}
+.main-navigation .hamburger-icon .line:nth-child(3).active-burger {
+	transform: translateY(-10px) rotate(-45deg);
+	background-color: #FFCF55;
+}
+.main-navigation .menu-toggle {
+	border: none;
+	background: none;
+	display: block;
+	cursor: pointer;
+}
+@media (min-width: 37.5em) {
+	.main-navigation .menu-toggle {
+		margin: 0;
+	}
+}
+@media (min-width: 64em) {
+	.main-navigation .menu-toggle {
+		display: none;
+	}
+}
+.main-navigation .nav-menu {
+	display: none;
+}
+@media (min-width: 64em) {
+	.main-navigation .nav-menu {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+@media (min-width: 48em) {
+	.main-navigation .nav-menu li {
+		font-size: 1rem;
+	}
+}
+.main-navigation .nav-menu li a {
+	color: black;
+}
+@media (min-width: 54em) {
+	.main-navigation .nav-menu li a {
+		padding: 1.5rem;
+	}
+}
+.main-navigation .nav-menu li a:hover {
+	color: #2DB1B1;
+}
+
+.toggled .menu-toggle {
+	position: absolute;
+	z-index: 99;
+	top: 0.5rem;
+	right: 0;
+}
+@media (min-width: 37.5em) {
+	.toggled .menu-toggle {
+		top: 0.9rem;
+	}
+}
+@media (min-width: 48em) {
+	.toggled .menu-toggle {
+		top: 1.3rem;
+	}
+}
+@media (min-width: 64em) {
+	.toggled .menu-toggle {
+		display: none;
+	}
+}
+.toggled .menu-main-menu-container {
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 80;
+	width: 100%;
+	background-color: #000;
+	padding: 7rem 2rem 2rem;
+}
+@media (min-width: 64em) {
+	.toggled .menu-main-menu-container {
+		display: none;
+	}
+}
+.toggled .nav-menu {
+	display: block;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+.toggled .nav-menu li {
+	font-size: 2rem;
+}
+.toggled .nav-menu li a {
+	color: black;
+}
+.toggled .nav-menu li a:hover {
+	color: #2DB1B1;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -720,6 +863,16 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.hero-container {
+	position: relative;
+}
+.hero-container .page-title {
+	position: absolute;
+	bottom: 8px;
+	left: 16px;
+	color: white;
 }
 
 /* Comments
@@ -862,7 +1015,7 @@ textarea {
 	word-wrap: normal !important;
 }
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
+	background-color: #F1F1F1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;

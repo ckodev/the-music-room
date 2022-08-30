@@ -1,0 +1,167 @@
+// Header Navigation
+
+
+
+.main-navigation {
+    position: absolute;
+    z-index: 100;
+    justify-content: space-between;
+    display: flex;
+    flex-grow: 1;
+
+    @include largeTabletQuery {
+        width: 100%;
+    }
+
+    .custom-logo {
+        width: 4rem;
+    }
+
+    .custom-logo-link {
+        width: 6rem;
+        align-self: center;
+        img {
+            width: 100%;
+        }
+    }
+
+    .page-title {
+        color: white;
+    }
+
+    .site-branding {
+        display: flex;
+    }
+    
+
+    .hamburger-icon {
+
+        .line {
+            width: 35px;
+            height: 2px;
+            background-color: White;
+            display: block;
+            margin: 8px auto;
+            transition: all 0.3s ease-in-out;
+    
+            &:nth-child(2).active-burger{
+                width: 0;
+            }
+            &:nth-child(1).active-burger{
+                transform: translateY(10px) rotate(45deg);
+                background-color: $fan-yellow;
+            }
+            &:nth-child(3).active-burger{
+                transform: translateY(-10px) rotate(-45deg);
+                background-color: $fan-yellow;
+            }
+        }  
+    }
+
+    // hamburger button
+    .menu-toggle {
+        border: none;
+        background: none;
+        display: block;
+        cursor: pointer;
+
+        @include tabletQuery {
+            // padding: 1rem 3rem;
+            margin: 0;
+            // width: 100%;
+        }
+        @include desktopQuery {
+            display: none;
+        }
+    }
+
+    // the ul containing the menu
+    .nav-menu {
+        display: none;
+
+        @include desktopQuery {
+            display: flex;
+            justify-content: space-between;
+        }
+        li {
+            @include largeTabletQuery {
+                font-size: 1rem;
+            }
+
+            a {
+                color: $color__nav-link;
+
+                @include medScreenQuery {
+                  
+                    padding: 1.5rem;
+                }
+
+                &:hover {
+                    color: $color__nav-link-hover;
+                }
+            }
+        }
+    }
+}
+
+// When hamburger button is toggled
+.toggled {
+
+    // hamburger button after toggle
+    .menu-toggle {
+        
+        position: absolute;
+        z-index: 99;
+        top: .5rem;
+        right: 0;
+
+        @include tabletQuery {
+            top: .9rem;
+        }
+
+        @include largeTabletQuery {
+            top: 1.3rem;
+        }
+
+        @include desktopQuery {
+            display: none;
+        }
+    }
+
+    // the div containing the ul of menu
+    .menu-main-menu-container {
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 80;
+        width: 100%;
+        background-color: $color__header-background;
+        padding: 7rem 2rem 2rem;
+
+		@include desktopQuery {
+			display: none;
+
+		}
+    }
+
+    // the ul containing the menu
+    .nav-menu {
+        display: block;
+        left: 0;
+        right: 0;
+        top: 0;
+
+        li {
+            font-size: 2rem;
+            a {
+                color: $color__nav-link;
+
+                &:hover {
+                    color: $color__nav-link-hover;
+                }
+            }
+        }
+    }
+}
