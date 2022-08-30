@@ -1,4 +1,8 @@
 body {
 	position: relative;
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	margin: auto;
+    max-width: 2000px;
+	background: $tmr-white; // Fallback for when there is no custom background color defined.
 }
+
+
