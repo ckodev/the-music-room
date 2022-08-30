@@ -3,7 +3,6 @@
 	width: 100%;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -83,6 +82,7 @@
 
 	.main-navigation ul {
 		display: flex;
+		flex-direction: column;
 	}
 }
 
