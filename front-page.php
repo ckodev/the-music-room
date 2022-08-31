@@ -29,31 +29,45 @@ get_header();
 				// ****************************************************//
 				?>
 				<section class="bio-section">
-					<article class="bio-text-container">
+					<article class="bio-container">
 					<?php
+
+
 						if (get_field('bio_heading')) {
 							?>
-							<h3><?php the_field('bio_heading'); ?></h3>
+							<h1 class="screen-reader-text"><?php the_field('bio_heading'); ?></h1>
 							<?php
 						}
-						if (get_field('bio')) {
+						?>
+						<div class="bio-image-container">
+							<?php
+							if (get_field('bio_image')) {
+									$image = get_field('bio_image');
+									if( !empty($image) ): ?>
+										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+									<?php endif; ?>
+								<?php
+							}
+							if (get_field('name')) {
+								?>
+								<h2><?php the_field('name'); ?></h2>
+								<?php
+							}
 							?>
-							<p><?php the_field('bio'); ?></p>
+						</div>
+						<div class="name-and-bio-container">
 							<?php
-						}
-					?>
-					</article>
-				
-					<article class="bio-image-container">
-					<?php
-					if (get_field('bio_image')) {
-							$image = get_field('bio_image');
-							if( !empty($image) ): ?>
-								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-							<?php endif; ?>
-						<?php
-					}
-					?>
+							if (get_field('bio')) {
+								?>
+								<p><?php the_field('bio'); ?></p>
+								<?php
+							}
+							?>
+						</div>
+					
+						<div class="bio-image-container">
+						
+						</div>
 					</article>
 				</section>
 				<?php
