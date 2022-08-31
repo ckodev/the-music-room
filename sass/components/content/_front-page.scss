@@ -1,36 +1,30 @@
-.hero-container {
-    position: relative;
 
-    img {
-      width: 100%;
-      min-height: 35rem;
-      object-fit: cover;
-      object-position: 30% 50%;
+.bio-container {
+    .bio-image-container {
+        display: block;
+        position: relative;
+        margin: auto;
+        max-width: 27rem;
+
+        img {
+            
+            object-position: 3% 50%;
+            object-fit: cover;
+            border-radius: 50%;
+            aspect-ratio: 1/1;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+            position: absolute;
+            bottom: 3rem;
+            left: 0;
+            line-height: 1.5rem;
+        }
     }
+
     
-    h2 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: $tmr-white;
-      font-size: 1rem;
-    }
-
-    .page-title {
-        position: absolute;
-        bottom: 8px;
-        left: 16px;
-        color: $tmr-white;
-      }
-}
-
-.featured-image-section {
-
-  img {
-    width: 100%;
-    min-height: 35rem;
-    object-fit: cover;
-    object-position: 30% 50%;
-  }
-
+  
 }
