@@ -84,9 +84,8 @@
         transition: all 0.2s ease-in-out;
         display: block;
         position: absolute;
-     
         left: -1000px;
-        background-color: $tmr-black;
+        background-color: rgb($tmr-black,0.5);
         z-index: 80;
         width: 100%;
 
@@ -148,7 +147,6 @@
         right: 0;
         top: 0;
         left: 0;
-        background-color: $tmr-black;
         z-index: 80;
         width: 100%;
 
