@@ -461,7 +461,8 @@ body {
 	position: relative;
 	margin: auto;
 	max-width: 2000px;
-	background: rgb(255, 255, 255);
+	background: #1b1b1b;
+	color: #F1F1F1;
 }
 
 hr {
@@ -771,7 +772,7 @@ textarea {
 	display: block;
 	position: absolute;
 	left: -1000px;
-	background-color: #1b1b1b;
+	background-color: rgba(27, 27, 27, 0.5);
 	z-index: 80;
 	width: 100%;
 }
@@ -813,7 +814,6 @@ textarea {
 	right: 0;
 	top: 0;
 	left: 0;
-	background-color: #1b1b1b;
 	z-index: 80;
 	width: 100%;
 }
@@ -856,6 +856,30 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+.bio-container .bio-image-container {
+	display: block;
+	position: relative;
+	margin: auto;
+	max-width: 27rem;
+}
+.bio-container .bio-image-container img {
+	-o-object-position: 3% 50%;
+	   object-position: 3% 50%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	border-radius: 50%;
+	aspect-ratio: 1/1;
+	width: 100%;
+	padding: 1rem;
+}
+.bio-container .bio-image-container h2 {
+	font-size: 3rem;
+	position: absolute;
+	bottom: 3rem;
+	left: 0;
+	line-height: 1.5rem;
+}
+
 .hero-container {
 	position: relative;
 }
@@ -872,7 +896,9 @@ textarea {
 	bottom: 0;
 	left: 0;
 	color: rgb(255, 255, 255);
-	font-size: 1rem;
+	font-size: 3rem;
+	margin: 0;
+	padding: 1rem;
 }
 .hero-container .page-title {
 	position: absolute;
