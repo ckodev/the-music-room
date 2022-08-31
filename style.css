@@ -875,9 +875,9 @@ textarea {
 .bio-container .bio-image-container h2 {
 	font-size: 3rem;
 	position: absolute;
-	bottom: 3rem;
+	bottom: -3rem;
 	left: 0;
-	line-height: 1.5rem;
+	line-height: 3.5rem;
 }
 
 .hero-container {
