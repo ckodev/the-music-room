@@ -31,11 +31,9 @@ get_header();
 				<section class="bio-section">
 					<article class="bio-container">
 					<?php
-
-
 						if (get_field('bio_heading')) {
 							?>
-							<h1 class="screen-reader-text"><?php the_field('bio_heading'); ?></h1>
+							<h1 class="screen-reader-text"><?php the_field('bio_heading') ?></h1>
 							<?php
 						}
 						?>
@@ -48,18 +46,23 @@ get_header();
 									<?php endif; ?>
 								<?php
 							}
-							if (get_field('name')) {
-								?>
-								<h2><?php the_field('name'); ?></h2>
-								<?php
-							}
 							?>
 						</div>
-						<div class="name-and-bio-container">
+						<div class="bio-text-container">
 							<?php
+							if (get_field('name')) {
+								?>
+								<h2 class="bio-name"><?php the_field('name'); ?></h2>
+								<?php
+							}
+							if (get_field('titles')) {
+								?>
+								<h3 class="bio-titles"><?php the_field('titles'); ?></h3>
+								<?php
+							}
 							if (get_field('bio')) {
 								?>
-								<p><?php the_field('bio'); ?></p>
+								<p class="bio-text"><?php the_field('bio'); ?></p>
 								<?php
 							}
 							?>
