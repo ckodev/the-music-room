@@ -30,36 +30,45 @@ get_header();
 				?>
 				<section class="bio-section">
 					<article class="bio-container">
-					<?php
+						<?php
 						if (get_field('bio_heading')) {
 							?>
 							<h1 class="screen-reader-text"><?php the_field('bio_heading') ?></h1>
 							<?php
 						}
 						?>
-						<div class="bio-image-container">
-							<?php
-							if (get_field('bio_image')) {
-									$image = get_field('bio_image');
-									if( !empty($image) ): ?>
-										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-									<?php endif; ?>
-								<?php
-							}
-							?>
-						</div>
+						
 						<div class="bio-text-container">
+
+							<div class="name-titles-container">
+								<?php
+								if (get_field('name')) {
+								
+									?>
+									<h2 class="bio-name"><?php the_field('name'); ?></h2>
+									<?php
+								}
+								if (get_field('titles')) {
+									?>
+									<h3 class="bio-titles"><?php the_field('titles'); ?></h3>
+									<?php
+								}
+								?>
+							</div>
+
+							<div class="bio-image-container">
+								<?php
+								if (get_field('bio_image')) {
+										$image = get_field('bio_image');
+										if( !empty($image) ): ?>
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+										<?php endif; ?>
+									<?php
+								}
+								?>
+							</div>
+
 							<?php
-							if (get_field('name')) {
-								?>
-								<h2 class="bio-name"><?php the_field('name'); ?></h2>
-								<?php
-							}
-							if (get_field('titles')) {
-								?>
-								<h3 class="bio-titles"><?php the_field('titles'); ?></h3>
-								<?php
-							}
 							if (get_field('bio')) {
 								?>
 								<p class="bio-text"><?php the_field('bio'); ?></p>
@@ -67,10 +76,7 @@ get_header();
 							}
 							?>
 						</div>
-					
-		
-						
-						</div>
+
 					</article>
 				</section>
 				<?php
@@ -96,39 +102,45 @@ get_header();
 				// ****************************************************//
 				?>
 				<section class="clients-section">
-					<article class="clients-text-container">
-						<?php
-						if (get_field('clients_heading')) {
-							?>
-							<h3><?php the_field('clients_heading'); ?></h3>
+					<article>
+						<div class="clients-text-container">
 							<?php
-						}
-						if (get_field('client_text')) {
+							if (get_field('clients-heading')) {
+								?>
+								<h1 class="screen-reader-text"><?php the_field('clients-heading') ?></h1>
+								<?php
+							}
+							if (get_field('clients_heading')) {
+								?>
+								<h2><?php the_field('clients_heading'); ?></h2>
+								<?php
+							}
+							if (get_field('client_text')) {
+								?>
+								<p><?php the_field('client_text'); ?></p>
+								<?php
+							}
 							?>
-							<p><?php the_field('client_text'); ?></p>
+						</div>
+						<div class="clients-examples-container">
 							<?php
-						}
-						?>
-					</article>
-
-					<article class="clients-examples-container">
-						<?php
-						$posts = get_field('clients');
-						if( $posts ): ?>
-								<ul>
-									<?php foreach( $posts as $post ): ?>
-										<li>
-											<a href="#">
-												<h3><?php the_title(); ?></h3>
-												<?php echo get_the_post_thumbnail( $post->ID, 'medium' ); ?>
-											</a>
-										</li>
-									<?php endforeach; ?>
-								</ul>
-							<?php 
-						endif; 
-						wp_reset_postdata();
-						?>
+							$posts = get_field('clients');
+							if( $posts ): ?>
+									<ul>
+										<?php foreach( $posts as $post ): ?>
+											<li>
+												<a href="#">
+													<h3><?php the_title(); ?></h3>
+													<?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
+												</a>
+											</li>
+										<?php endforeach; ?>
+									</ul>
+								<?php
+							endif;
+							wp_reset_postdata();
+							?>
+						</div>
 					</article>
 				</section>
 				<?php
