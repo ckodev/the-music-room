@@ -4,6 +4,16 @@ body {
     max-width: 2000px;
 	background: $tmr-black; // Fallback for when there is no custom background color defined.
 	color: $tmr-offwhite;
+
+
+	article {
+		margin: 1rem;
+
+		&.featured-image {
+			margin: initial;
+		}
+	}
 }
+
 
 
