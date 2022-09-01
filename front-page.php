@@ -68,7 +68,7 @@ get_header();
 							?>
 						</div>
 					
-						<div class="bio-image-container">
+		
 						
 						</div>
 					</article>
