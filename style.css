@@ -903,6 +903,7 @@ textarea {
 	   object-fit: cover;
 	-o-object-position: 30% 50%;
 	   object-position: 30% 50%;
+	aspect-ratio: 16/9;
 }
 .hero-container h2 {
 	position: absolute;
@@ -927,6 +928,7 @@ textarea {
 	   object-fit: cover;
 	-o-object-position: 30% 50%;
 	   object-position: 30% 50%;
+	aspect-ratio: 16/9;
 }
 
 /* Comments
