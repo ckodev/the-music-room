@@ -1,5 +1,6 @@
 
 .bio-container {
+
     .bio-image-container {
         display: block;
         position: relative;
@@ -22,6 +23,18 @@
             bottom: -3rem;
             left: 0;
             line-height: 3.5rem;
+        }
+    }
+
+    .bio-text-container {
+
+        .bio-name::after {
+            display: block;
+            content: "";
+            height: 3px;
+            width: 100%;
+            background-color: $tmr-offwhite;
+            margin-top: 1rem;
         }
     }
 
