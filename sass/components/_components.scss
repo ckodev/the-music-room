@@ -6,10 +6,12 @@
 /* Posts and pages
 --------------------------------------------- */
 @import "content/posts-and-pages";
-@import "content/front-page";
-@import "content/hero";
-@import "content/featured-imgs";
-@import "content/clients";
+@import "content/front-page/front-page";
+@import "content/front-page/hero";
+@import "content/front-page/featured-imgs";
+@import "content/front-page/clients-section";
+@import "content/front-page/contact-section";
+@import "content/front-page/bio-section";
 
 /* Comments
 --------------------------------------------- */
