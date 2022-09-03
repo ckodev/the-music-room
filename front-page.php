@@ -102,12 +102,20 @@ get_header();
 				// ****************************************************//
 				?>
 				<section class="clients-section">
-					<article>
+				<article>
+					<?php
+					if (get_field('client_text')) {
+								?>
+								<p><?php the_field('client_text'); ?></p>
+								<?php
+							}
+							?>
+					
 						<div class="clients-text-container">
 							<?php
 							if (get_field('clients-heading')) {
 								?>
-								<h1 class="screen-reader-text"><?php the_field('clients-heading') ?></h1>
+								<h1 id="hello" class="screen-reader-text"><?php the_field('clients-heading') ?></h1>
 								<?php
 							}
 							if (get_field('clients_heading')) {
@@ -115,24 +123,31 @@ get_header();
 								<h2><?php the_field('clients_heading'); ?></h2>
 								<?php
 							}
-							if (get_field('client_text')) {
+							if (get_field('client_types')) {
 								?>
-								<p><?php the_field('client_text'); ?></p>
+								<h3 class="client-types"><?php the_field('client_types'); ?></h3>
 								<?php
 							}
+							
 							?>
 						</div>
 						<div class="clients-examples-container">
 							<?php
 							$posts = get_field('clients');
 							if( $posts ): ?>
-									<ul>
+									<ul id="client-list">
 										<?php foreach( $posts as $post ): ?>
 											<li>
-												<a href="#">
-													<h3><?php the_title(); ?></h3>
-													<?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
-												</a>
+												
+												<div id="play-example-container" class="play-example-container">
+													<div class="youtube">Listen</div>
+													<h2><?php the_title(); ?></h2>
+													<div id="iframe-container" class="iframe-container"><?php the_field('youtube_embed'); ?></div>
+													
+												</div>
+
+												<?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
+												
 											</li>
 										<?php endforeach; ?>
 									</ul>
@@ -161,29 +176,36 @@ get_header();
 					</article>
 				</section>
 				<?php
+
 				// Contact Form Section *******************************//
 				// ****************************************************//
 				?>
 				<section class="contact-form-section">
-					<article class="contact-text-container">
-					<?php
-					if (get_field('contact_heading')) {
-						?>
-						<h3><?php the_field('contact_heading'); ?></h3>
+					<article>
+						<div class="contact-text-container">
 						<?php
-					}
-					if (get_field('contact_text')) {
+						if (get_field('contact_heading')) {
+							?>
+							<h2><?php the_field('contact_heading'); ?></h2>
+							<?php
+						}
+						if (get_field('contact_sub_heading')) {
+							?>
+							<h3><?php the_field('contact_sub_heading'); ?></h3>
+							<?php
+						}
+						if (get_field('contact_text')) {
+							?>
+							<p><?php the_field('contact_text'); ?></p>
+							<?php
+						}
 						?>
-						<p><?php the_field('contact_text'); ?></p>
+						</div>
+						<div class="form-container">
 						<?php
-					}
-					?>
-					</article>
-
-					<article class="form-container">
-					<?php
-					echo do_shortcode('[wpforms id="90"]'); 
-					?>
+						echo do_shortcode('[wpforms id="90"]');
+						?>
+						</div>
 					</article>
 				</section>
 				<?php
