@@ -5,6 +5,14 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+
+	
+	
+	
+  
+
+	
+
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
 	// Return early if the navigation doesn't exist.
@@ -34,6 +42,7 @@
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
+		
 
 		const mql = window.matchMedia('(max-width: 1024px)');
 				mql.onchange = (e) => { 
@@ -69,7 +78,6 @@
 	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
 	document.addEventListener( 'click', function( event ) {
 		const isClickInside = siteNavigation.contains( event.target );
-
 		if ( ! isClickInside ) {
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
@@ -92,6 +100,27 @@
 	for ( const link of linksWithChildren ) {
 		link.addEventListener( 'touchstart', toggleFocus, false );
 	}
+
+	function openYoutube(event) {
+		console.log(event)
+
+		if (event.target.classList.contains('youtube')) {
+			if (document.querySelector('#client-list div.open') !== null) {
+				document.querySelector('#client-list div.open').classList.remove('open');
+			} else {
+				event.target.classList.add('open');
+			}
+		}
+		
+		
+
+	}
+
+	const youtubeOpen = document.getElementById("client-list");
+	console.log(youtubeOpen)
+	youtubeOpen.addEventListener("click", openYoutube, false);
+	
+
 
 	/**
 	 * Sets or removes .focus class on an element.
