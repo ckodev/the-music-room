@@ -65,26 +65,49 @@
                     width: 100%;
                     height: 100%;
                     display: flex;
+                    flex-direction: column;
                     align-items: center; 
                     justify-content: center; 
                     color: transparent;
+                    cursor: pointer;
+
+                    &.open {
+
+                        .iframe-container {
+
+                            iframe {
+                                display: flex;
+                                aspect-ratio: 16/9;
+                                height: auto;
+                                width: 100%;
+                                max-width: 45rem;
+                                position: fixed;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                z-index: 2000;
+                            }
+                        }
+                    }
                   
 
                     iframe {
                         display: none;
-                        max-height: 100%;
-                        position: fixed;
-                        
                     }
 
-                    h2 {
+                    .client-h2 {
                         text-align: center;
+                        color: transparent;
                     }
 
                     &:hover {
                         color: $tmr-offwhite;
                         background-color: rgb(black, 0.8);
                         color: $tmr-offwhite;
+
+                        .client-h2 {
+                            color: $tmr-offwhite;
+                        }
 
                       
                     }

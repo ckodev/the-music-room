@@ -167,7 +167,8 @@
                 color: $tmr-white;
 
                 &:hover {
-                    color: $tmr-hover;
+                    color: $tmr-focus;
+                    text-decoration: none;
                 }
             }
         }

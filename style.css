@@ -832,7 +832,8 @@ textarea {
 	color: rgb(255, 255, 255);
 }
 .toggled .nav-menu li a:hover {
-	color: rgb(0, 228, 190);
+	color: rgb(228, 91, 0);
+	text-decoration: none;
 }
 
 /* Posts and pages
@@ -878,12 +879,15 @@ section article h2 {
 	text-transform: uppercase;
 	padding: 0 0.5rem;
 	margin: 0;
+	font-weight: bold;
+	color: #F1F1F1;
 }
 section article h3 {
 	font-weight: 200;
 	text-transform: capitalize;
 	padding: 0 0.5rem;
 	margin: 0;
+	color: #F1F1F1;
 }
 
 .hero-container {
@@ -904,6 +908,7 @@ section article h3 {
 	left: 0;
 	color: rgb(255, 255, 255);
 	font-size: 3rem;
+	font-weight: bold;
 	margin: 0;
 	padding: 1rem;
 }
@@ -979,21 +984,37 @@ section article h3 {
 	width: 100%;
 	height: 100%;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: transparent;
+	cursor: pointer;
+}
+.clients-section .clients-examples-container ul li .play-example-container.open .iframe-container iframe {
+	display: flex;
+	aspect-ratio: 16/9;
+	height: auto;
+	width: 100%;
+	max-width: 45rem;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2000;
 }
 .clients-section .clients-examples-container ul li .play-example-container iframe {
 	display: none;
-	max-height: 100%;
-	position: fixed;
 }
-.clients-section .clients-examples-container ul li .play-example-container h2 {
+.clients-section .clients-examples-container ul li .play-example-container .client-h2 {
 	text-align: center;
+	color: transparent;
 }
 .clients-section .clients-examples-container ul li .play-example-container:hover {
 	color: #F1F1F1;
 	background-color: rgba(0, 0, 0, 0.8);
+	color: #F1F1F1;
+}
+.clients-section .clients-examples-container ul li .play-example-container:hover .client-h2 {
 	color: #F1F1F1;
 }
 .clients-section .clients-examples-container ul li img {
