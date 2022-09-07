@@ -141,9 +141,7 @@ get_header();
 												
 												<div id="play-example-container" class="play-example-container">
 													<div class="youtube">Listen</div>
-													<h2><?php the_title(); ?></h2>
-													<div id="iframe-container" class="iframe-container"><?php the_field('youtube_embed'); ?></div>
-													
+													<h2 class="client-h2"><?php the_title(); ?></h2>
 												</div>
 
 												<?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
