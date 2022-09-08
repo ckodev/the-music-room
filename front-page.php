@@ -129,22 +129,30 @@ get_header();
 								<?php
 							}
 							
+							
 							?>
 						</div>
 						<div class="clients-examples-container">
 							<?php
-							$posts = get_field('clients');
+							$posts = get_field('clients');	
 							if( $posts ): ?>
 									<ul id="client-list">
 										<?php foreach( $posts as $post ): ?>
 											<li>
-												
-												<div id="play-example-container" class="play-example-container">
-													<div class="youtube">Listen</div>
-													<h2 class="client-h2"><?php the_title(); ?></h2>
-												</div>
-
-												<?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
+											
+											<?php 
+											
+											if (get_field('youtube_embed')) {
+												?>
+												<button ><?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?></button>
+													<div class="embed-container">
+														<?php the_field('youtube_embed') ?> 
+													</div>
+												<?php
+											}
+											
+											?>
+											
 												
 											</li>
 										<?php endforeach; ?>
