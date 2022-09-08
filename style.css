@@ -977,45 +977,8 @@ section article h3 {
 .clients-section .clients-examples-container ul li {
 	position: relative;
 }
-.clients-section .clients-examples-container ul li .play-example-container {
-	position: absolute;
-	margin: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: transparent;
-	cursor: pointer;
-}
-.clients-section .clients-examples-container ul li .play-example-container.open .iframe-container iframe {
-	display: flex;
-	aspect-ratio: 16/9;
-	height: auto;
-	width: 100%;
-	max-width: 45rem;
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 2000;
-}
-.clients-section .clients-examples-container ul li .play-example-container iframe {
-	display: none;
-}
-.clients-section .clients-examples-container ul li .play-example-container .client-h2 {
-	text-align: center;
-	color: transparent;
-}
-.clients-section .clients-examples-container ul li .play-example-container:hover {
-	color: #F1F1F1;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #F1F1F1;
-}
-.clients-section .clients-examples-container ul li .play-example-container:hover .client-h2 {
-	color: #F1F1F1;
+.clients-section .clients-examples-container ul li .uk-button.uk-button-default {
+	padding: 0;
 }
 .clients-section .clients-examples-container ul li img {
 	display: block;
