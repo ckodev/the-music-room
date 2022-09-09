@@ -137,24 +137,39 @@ get_header();
 							$posts = get_field('clients');	
 							if( $posts ): ?>
 									<ul id="client-list">
-										<?php foreach( $posts as $post ): ?>
-											<li>
+
+										<?php
+									
+										?>
+										<?php foreach( $posts as $post): ?>
 											
-											<?php 
+												<li>
 											
-											if (get_field('youtube_embed')) {
-												?>
-												<button ><?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?></button>
-													<div class="embed-container">
-														<?php the_field('youtube_embed') ?> 
-													</div>
-												<?php
-											}
-											
-											?>
-											
-												
-											</li>
+													<a id="<?php echo $post->ID ?>" class="uk-button uk-button-default" href="#modal-center<?php echo $post->ID ?>" uk-toggle><?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?></a>
+
+													<?php 
+													if (get_field('youtube_embed')) {
+														?>
+
+														<div id="modal-center<?php echo $post->ID ?>" class="uk-flex-top" uk-modal>
+															<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+																<button class="uk-modal-close-default" type="button" uk-close></button>
+
+																<div class="embed-container">
+																	<?php the_field('youtube_embed') ?> 
+																</div>
+
+															</div>
+														</div>
+														<?php
+														
+													}
+													
+													?>
+									
+												</li>
+										
 										<?php endforeach; ?>
 									</ul>
 								<?php

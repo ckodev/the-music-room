@@ -10,7 +10,13 @@ function openYoutube(event) {
             event.target.classList.add('open');
         } 
     } 
-
 }
 const youtubeOpen = document.getElementById("client-list");
 youtubeOpen.addEventListener("click", openYoutube, false);
+
+
+// Add uk-video attribute to iframe. Stops video when modal closes. 
+const modalContainers = document.getElementsByClassName('embed-container');
+for (let i = 0; i < modalContainers.length; i++) {
+    modalContainers[i].children[0].setAttribute('uk-video', '');
+  }
