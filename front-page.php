@@ -129,26 +129,47 @@ get_header();
 								<?php
 							}
 							
+							
 							?>
 						</div>
 						<div class="clients-examples-container">
 							<?php
-							$posts = get_field('clients');
+							$posts = get_field('clients');	
 							if( $posts ): ?>
 									<ul id="client-list">
-										<?php foreach( $posts as $post ): ?>
-											<li>
-												
-												<div id="play-example-container" class="play-example-container">
-													<div class="youtube">Listen</div>
-													<h2><?php the_title(); ?></h2>
-													<div id="iframe-container" class="iframe-container"><?php the_field('youtube_embed'); ?></div>
-													
-												</div>
 
-												<?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
-												
-											</li>
+										<?php
+									
+										?>
+										<?php foreach( $posts as $post): ?>
+											
+												<li>
+											
+													<a id="<?php echo $post->ID ?>" class="uk-button uk-button-default" href="#modal-center<?php echo $post->ID ?>" uk-toggle><?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?></a>
+
+													<?php 
+													if (get_field('youtube_embed')) {
+														?>
+
+														<div id="modal-center<?php echo $post->ID ?>" class="uk-flex-top" uk-modal>
+															<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+																<button class="uk-modal-close-default" type="button" uk-close></button>
+
+																<div class="embed-container">
+																	<?php the_field('youtube_embed') ?> 
+																</div>
+
+															</div>
+														</div>
+														<?php
+														
+													}
+													
+													?>
+									
+												</li>
+										
 										<?php endforeach; ?>
 									</ul>
 								<?php

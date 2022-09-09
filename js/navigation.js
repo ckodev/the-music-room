@@ -7,12 +7,6 @@
 ( function() {
 
 	
-	
-	
-  
-
-	
-
 	const siteNavigation = document.getElementById( 'site-navigation' );
 
 	// Return early if the navigation doesn't exist.
@@ -100,27 +94,6 @@
 	for ( const link of linksWithChildren ) {
 		link.addEventListener( 'touchstart', toggleFocus, false );
 	}
-
-	function openYoutube(event) {
-		console.log(event)
-
-		if (event.target.classList.contains('youtube')) {
-			if (document.querySelector('#client-list div.open') !== null) {
-				document.querySelector('#client-list div.open').classList.remove('open');
-			} else {
-				event.target.classList.add('open');
-			}
-		}
-		
-		
-
-	}
-
-	const youtubeOpen = document.getElementById("client-list");
-	console.log(youtubeOpen)
-	youtubeOpen.addEventListener("click", openYoutube, false);
-	
-
 
 	/**
 	 * Sets or removes .focus class on an element.
