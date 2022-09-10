@@ -5,17 +5,24 @@
 .main-navigation {
     position: absolute;
     z-index: 100;
+    top: 0;
     justify-content: space-between;
     display: flex;
     flex-grow: 1;
     background: linear-gradient(180deg, #00000078, transparent);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include desktopQuery {
+        padding-right: .5rem;
+    }
+
 
     @include largeTabletQuery {
         width: 100%;
     }
 
 
-    .custom-logo-link {
+    .attachment-full.size-full {
         width: 3rem;
         z-index: 200;
         align-self: center;
@@ -53,10 +60,12 @@
             &:nth-child(1).active-burger{
                 transform: translateY(10px) rotate(45deg);
                 background-color: $tmr-offwhite;
+                width: 25px;
             }
             &:nth-child(3).active-burger{
                 transform: translateY(-10px) rotate(-45deg);
                 background-color: $tmr-white;
+                width: 25px;
             }
         }  
     }
@@ -84,10 +93,12 @@
         transition: all 0.2s ease-in-out;
         display: block;
         position: absolute;
+        top: 0;
         left: -1000px;
-        background-color: rgb($tmr-black,0.5);
+        background-color: rgb($tmr-black,0.75);
         z-index: 80;
         width: 100%;
+        margin-top: 0;
 
 		@include desktopQuery {
             position: initial;
@@ -110,16 +121,18 @@
     // the ul containing the menu
      // the ul containing the menu
      .nav-menu {
-        padding: 5rem 1rem 0 1rem;
-        
+        padding: 5rem 0rem 2rem 0rem;
+        text-align: center;
 
         li {
             font-size: 2rem;
             a {
                 color: $tmr-white;
+                text-decoration: none;
+                padding: 1rem;
 
                 &:hover {
-                    color: $tmr-hover;
+                    color: $tmr-focus;
                 }
             }
         }
@@ -128,19 +141,14 @@
 
 // When hamburger button is toggled
 .toggled {
-
-
-
     // hamburger button after toggle
     .menu-toggle {
         z-index: 99;
        
        
     }
-
     // the div containing the ul of menu
     .menu-header-menu-container {
-
         transition: all 0.2s ease-in-out;
         display: block;
         position: absolute;
@@ -149,23 +157,19 @@
         left: 0;
         z-index: 80;
         width: 100%;
-
-
 		@include desktopQuery {
 			display: none;
-
 		}
     }
-
     // the ul containing the menu
     .nav-menu {
-        padding: 5rem 1rem 0 1rem;
-
+        padding: 5rem 0rem 2rem 0rem;
+        text-align: center;
         li {
             font-size: 2rem;
             a {
                 color: $tmr-white;
-
+                padding: 1rem;
                 &:hover {
                     color: $tmr-focus;
                     text-decoration: none;

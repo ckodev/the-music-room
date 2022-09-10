@@ -1,0 +1,75 @@
+footer {
+
+    .site-info {
+        .footer-nav-container {
+            position: relative;
+            margin: 0 1rem;
+            padding: 1rem 0;
+
+            .attachment-full.size-full {
+                position: absolute;
+                right: 0;
+                width: 3rem;
+                z-index: 200;
+                align-self: center;
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+            // save this for when more pages get added
+            // .custom-logo-link {
+            //     position: absolute;
+            //     right: 0;
+            //     width: 3rem;
+            //     z-index: 200;
+            //     align-self: center;
+            //     img {
+            //         width: 100%;
+            //         vertical-align: middle;
+            //     }
+            // }
+
+            .footer-nav {
+                padding-bottom: 1rem;  
+            }
+            
+            h2 {
+                text-transform: uppercase;
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+                font-size: 1.3rem;
+                color: $tmr-offwhite;
+            }
+    
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+    
+                .on-mobile {
+                    display: block;
+                    @include desktopQuery {
+                        display: none;
+                    }
+                }
+                .on-desktop {
+                    display: none;
+                    @include desktopQuery {
+                        display: block;
+                    }
+                }
+    
+                li {
+        
+                    a{
+                        color: $tmr-offwhite;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        
+    }
+}

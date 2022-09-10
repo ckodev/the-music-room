@@ -17,15 +17,17 @@
         ?> 
         <img src="<?php echo $feat_image_url; ?>" alt="<?php echo $image_alt; ?>">
 
-        <?php 
-        if (function_exists('get_fields')) {
-            if (get_field('hero_text')) {
-                ?>
-                <h2><?php the_field('hero_text'); ?></h2>
-                <?php
+        <div class="hero-text-container grid">
+            <?php
+            if (function_exists('get_fields')) {
+                if (get_field('hero_text')) {
+                    ?>
+                    <h2><?php the_field('hero_text'); ?></h2>
+                    <?php
+                }
             }
-        }
-        ?>
+            ?>
+        </div>
     </section>
 
 

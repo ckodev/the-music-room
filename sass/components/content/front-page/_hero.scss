@@ -1,24 +1,35 @@
 .hero-container {
     position: relative;
 
+    .hero-text-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-bottom: 0;
+        
+      h2 {
+        color: $tmr-white;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+        padding: 1rem;
+        @include desktopQuery {
+          font-size: 5rem;
+        }
+      }
+    }
+
     img {
+ 
       width: 100%;
       min-height: 35rem;
       object-fit: cover;
       object-position: 30% 50%;
       aspect-ratio: 16/9;
+      
     }
     
-    h2 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      color: $tmr-white;
-      font-size: 3rem;
-      font-weight: bold;
-      margin: 0;
-      padding: 1rem;
-    }
+    
 
     .page-title {
         position: absolute;

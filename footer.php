@@ -12,16 +12,44 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-				<nav class="footer-menu">
-					<?php wp_nav_menu(array('theme_location' => 'footer')) ; ?>
-				</nav>
-		
-	
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'tmr' ), 'The Music Room', '<a href="http://ckodev.com">ckodev</a>' );
-				?>
+		<div class="site-info grid">
+				<div class="footer-nav-container">
+					<div>
+						<?php
+						// the_custom_logo();
+						echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' )
+						?>
+					</div>
+					<div class="footer-nav">
+						<h2>Info</h2>
+						<nav class="footer-menu">
+							<?php wp_nav_menu(array('theme_location' => 'footer')) ; ?>
+						</nav>
+					</div>
+					<div class="footer-nav">
+						<h2>Contact</h2>
+						<nav class="footer-menu">
+							<ul>
+								<?php
+								if (function_exists('get_fields')) {
+									$page_id = 31;
+									if (get_field('email', $page_id)) {
+										?>
+										<li><a href="mailto:<?php the_field('email', $page_id) ?>"><?php the_field('email', $page_id) ?></a></li>
+										<?php
+									}
+									if (get_field('phone_number', $page_id)) {
+										?>
+										<li class="on-desktop"><?php the_field('phone_number', $page_id) ?></li>
+										<li class="on-mobile"><a href="tel:+<?php the_field('phone_number', $page_id) ?>"><?php the_field('phone_number', $page_id) ?></a></li>
+										<?php
+									}
+								}
+								?>
+							</ul>
+						</nav>
+					</div>
+				</div>
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

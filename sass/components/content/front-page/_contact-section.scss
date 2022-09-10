@@ -6,67 +6,89 @@
             content: "";
         }
 
-        .form-container {
+        .contact-container {
+            @include desktopQuery {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+            }
 
-            form {
+            .contact-text-container {
+                order: 2;
+            }
+            .form-container {
 
-                .wpforms-field-container {
-
-                    input:-webkit-autofill,
-                    input:-webkit-autofill:hover, 
-                    input:-webkit-autofill:focus, 
-                    input:-webkit-autofill:active {
-                        -webkit-box-shadow: 0 0 0 30px $tmr-grey inset !important;
-                                box-shadow: 0 0 0 30px $tmr-grey inset !important;
-                        -webkit-text-fill-color: $tmr-offwhite !important;
-                    }
-
-                    .wpforms-required-label {
-                        color: $tmr-focus;
-                    }
-
-                    input {
-                        background: $tmr-grey;
-                        border: none;
-                        color: $tmr-offwhite;
-                        max-width: 100%;
-
-                        &:focus {
-                            background: transparent;
-                        }
-                    }
-                    textarea {
-                        background: $tmr-grey;
-                        border: none;
-                        color: $tmr-offwhite;
-                    }
-
-                    
-
-                    
-
+                label {
+                    font-weight: normal;
                 }
-
-                .wpforms-submit-container {
-                    display: flex;
-                    justify-content: flex-end;
-
-                    button {
-                        background: $tmr-grey;
-                        border: none;
-                        border-radius: 2px;
-                        color: $tmr-offwhite;
-
-                        &:hover {
-                            background-color: $tmr-focus;
+    
+                form {
+                    
+    
+                    .wpforms-field-container {
+    
+    
+                        input:-webkit-autofill,
+                        input:-webkit-autofill:hover, 
+                        input:-webkit-autofill:focus, 
+                        input:-webkit-autofill:active {
+                            -webkit-box-shadow: 0 0 0 30px $tmr-light-grey inset !important;
+                                    box-shadow: 0 0 0 30px $tmr-light-grey inset !important;
+                            -webkit-text-fill-color: $tmr-black !important;
+                        }
+    
+                        .wpforms-required-label {
+                            color: $tmr-focus;
+                        }
+    
+                        input {
+                            background: $tmr-light-grey;
                             border: none;
-                            cursor: pointer;
+                            color: $tmr-black;
+                            max-width: 100%;
+    
+                            &:focus {
+                                border: 1px dotted $tmr-focus;
+                            }
                         }
-
+                        textarea {
+                            background: $tmr-light-grey;
+                            border: none;
+                            color: $tmr-black;
+                        }
+    
+                        .wpforms-field-label {
+                            font-weight: normal;
+                        }
+    
                     }
+    
+                    .wpforms-submit-container {
+                        display: flex;
+                        justify-content: flex-end;
+    
+                        button {
+                            background: $tmr-light-grey;
+                            border: none;
+                            border-radius: 2px;
+                            color: $tmr-black;
+    
+                            &:hover {
+                                background-color: $tmr-focus;
+                                border: none;
+                                cursor: pointer;
+                            }
+    
+                        }
+                    }
+                       
                 }
-                   
             }
         }
+
+        
     }
 }
+
+

@@ -146,7 +146,7 @@ function tmr_scripts() {
 		// scripts
 		wp_enqueue_script( 'uikit', 'https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit.min.js', array(), _S_VERSION, true );
 		wp_enqueue_script( 'uikit-icons', 'https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit-icons.min.js', array(), _S_VERSION, true );
-			// styles
+		// styles
 		wp_enqueue_style( 'uikit', 'https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/css/uikit.min.css', array(), _S_VERSION  );
 
 

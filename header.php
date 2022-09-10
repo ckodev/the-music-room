@@ -27,10 +27,11 @@
 
 	<header id="masthead" class="site-header">
 		
-		<nav id="site-navigation" class="main-navigation">
+		<nav id="site-navigation" class="main-navigation grid">
 			<div class="site-branding">
 				<?php
-				the_custom_logo();
+				// the_custom_logo();
+				echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' )
 				?>
 				<a href="<?php echo esc_url( get_page_link( 31 ) ); ?>"><h1 class="page-title screen-reader-text"><?php the_title(); ?></h1></a>
 			</div><!-- .site-branding -->
@@ -50,6 +51,8 @@
 				)
 			);
 			?>
+
+			
 		</nav><!-- #site-navigation -->
 
 
