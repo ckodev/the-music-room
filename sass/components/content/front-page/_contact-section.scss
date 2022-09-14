@@ -2,10 +2,6 @@
 
     article {
 
-        &::before {
-            content: "";
-        }
-
         .contact-container {
             @include desktopQuery {
                 display: grid;
@@ -33,9 +29,9 @@
                         input:-webkit-autofill:hover, 
                         input:-webkit-autofill:focus, 
                         input:-webkit-autofill:active {
-                            -webkit-box-shadow: 0 0 0 30px $tmr-light-grey inset !important;
-                                    box-shadow: 0 0 0 30px $tmr-light-grey inset !important;
-                            -webkit-text-fill-color: $tmr-black !important;
+                            -webkit-box-shadow: 0 0 0 30px $tmr-input-fill inset !important;
+                                    box-shadow: 0 0 0 30px $tmr-input-fill inset !important;
+                            -webkit-text-fill-color: $tmr-dark-text !important;
                         }
     
                         .wpforms-required-label {
@@ -43,19 +39,21 @@
                         }
     
                         input {
-                            background: $tmr-light-grey;
+                            background: $tmr-input-fill;
                             border: none;
-                            color: $tmr-black;
+                            color: $tmr-dark-text;
                             max-width: 100%;
+                            @include borderRadiusLight;
     
                             &:focus {
                                 border: 1px dotted $tmr-focus;
                             }
                         }
                         textarea {
-                            background: $tmr-light-grey;
+                            background: $tmr-input-fill;
                             border: none;
-                            color: $tmr-black;
+                            color: $tmr-dark-text;
+                            @include borderRadiusLight;
                         }
     
                         .wpforms-field-label {
@@ -69,13 +67,14 @@
                         justify-content: flex-end;
     
                         button {
-                            background: $tmr-light-grey;
+                            background: $tmr-input-fill;
                             border: none;
-                            border-radius: 2px;
-                            color: $tmr-black;
+                            @include borderRadiusLight;
+                            color: $tmr-dark-text;
     
                             &:hover {
                                 background-color: $tmr-focus;
+                                color: $tmr-dark-text;
                                 border: none;
                                 cursor: pointer;
                             }

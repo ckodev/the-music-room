@@ -1,7 +1,12 @@
 
 .featured-image-section {
 
+  .featured-image-parralax {
+    @include backgroundParrelax;
+  }
+
     img {
+      display: none;
       width: 100%;
       min-height: 35rem;
       object-fit: cover;

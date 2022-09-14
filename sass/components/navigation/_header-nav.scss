@@ -1,19 +1,115 @@
 // Header Navigation
 
 
+header {
+    float: right;
+    height: 0;
+    width: fit-content;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 100;
+    .custom-nav {
+        display: flex;
+        align-items: center;
+        background-color: rgb($tmr-blur,0.69);
+        backdrop-filter: blur(5px);
+        padding: .5rem;
+        margin: .5rem;
+        border-radius: 60px;
+        @include desktopQuery {
+            margin: 1.5rem;
+        }
+        .nav-button {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            .flex-box {
+                .nav-close,
+                .nav-open {
+                    display: block;
+                    width: 1.5rem;
+                    fill: white;
+                    cursor: pointer;
+                }
+                .nav-close {
+                    display: none;
+                    &.open {
+                        width: 1.5rem;
+                        display: block;
+                    }
+                }
+                .nav-open {
+                    &.hide {
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+        .custom-nav-container {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            width: fit-content;
+            border-radius: 60px;
+            .nav-items {
+                display: none;
+                background-color: black;
+                width: fit-content;
+                aspect-ratio: 1/1;
+                margin: 0;
+                margin-right: 0.5rem;
+                margin-left: 0.2rem;
+                border-radius: 50%;
+                &.open {
+                    display: block;
+                }
+                .flex-box {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    a {
+                        display: flex;
+                        padding: .45rem;
+                        svg {
+                            height: 0.75rem;
+                            width: .75rem;
+                            fill: $tmr-background-light;
+                        }
+                    }
+                } 
+            }
+        }
+    }
+
+
+}
+
+
+
+
+
 
 .main-navigation {
+
     position: absolute;
     z-index: 100;
     top: 0;
     justify-content: space-between;
     display: flex;
     flex-grow: 1;
+    // background-color: $tmr-black;
     background: linear-gradient(180deg, #00000078, transparent);
     padding-top: 1rem;
     padding-bottom: 1rem;
     @include desktopQuery {
         padding-right: .5rem;
+        padding-left: .5rem;
     }
 
 
@@ -24,6 +120,9 @@
 
     .attachment-full.size-full {
         width: 3rem;
+        @include desktopQuery {
+            width: 5rem;
+        }
         z-index: 200;
         align-self: center;
         img {
@@ -125,14 +224,23 @@
         text-align: center;
 
         li {
-            font-size: 2rem;
+            font-size: 1.5rem;
+            font-family: $tmr-font-primary;
+            @include desktopQuery {
+                margin-left: 1rem;
+            }
+            
             a {
-                color: $tmr-white;
                 text-decoration: none;
-                padding: 1rem;
+                padding: .5rem 1rem;
+                @include desktopQuery {
+                    color: $tmr-typography;
+                    background: rgb($tmr-background-light,0.9);
+                    border-radius: 8px;
+                }
 
                 &:hover {
-                    color: $tmr-focus;
+                    text-decoration: underline;
                 }
             }
         }

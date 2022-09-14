@@ -1,36 +1,61 @@
 .hero-container {
     position: relative;
+    
+
+    .background-hero {
+      @include heroParrelax;
+      
+    }
 
     .hero-text-container {
+        display: flex;
         position: absolute;
         bottom: 0;
         left: 0;
         padding-bottom: 0;
+        .hero-logo-container {
+          width: 5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         
       h2 {
         color: $tmr-white;
         font-size: 3rem;
         font-weight: bold;
+        font-family: $tmr-font-primary;
         margin: 0;
         padding: 1rem;
-        @include desktopQuery {
+        @include tabletQuery {
+          font-size: 4rem;
+        }
+        @include largeTabletQuery {
           font-size: 5rem;
+        }
+        @include desktopQuery {
+          font-size: 6rem;
+          padding-left: 2rem;
+        }
+      }
+      .desktop-heading {
+        display: none;
+        @include tabletQuery {
+          display: block;
+        }
+      }
+      .mobile-heading {
+        display: block;
+        @include tabletQuery {
+          display: none;
         }
       }
     }
 
     img {
- 
-      width: 100%;
-      min-height: 35rem;
-      object-fit: cover;
-      object-position: 30% 50%;
-      aspect-ratio: 16/9;
+      width: 6rem;
       
     }
-    
-    
-
     .page-title {
         position: absolute;
         bottom: 8px;

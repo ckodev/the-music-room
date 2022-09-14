@@ -1,12 +1,11 @@
-body {
+body.page-template-default {
 	position: relative;
 	margin: auto;
     max-width: 2000px;
-	background: $tmr-black; // Fallback for when there is no custom background color defined.
-	color: $tmr-offwhite;
-
-
-	
+	// background: $tmr-black; // Dark Theme.
+	// background-color: $tmr-background-light; // Light theme
+	color: $tmr-typography;
+	font-family: $tmr-font-primary;
 }
 
 

@@ -20,13 +20,32 @@ $color__border-input: #ccc;
 $color__border-abbr: #666;
 
 // The Music Room Colors
+$tmr-bg-light: rgb(203 139 67 / 80%);
 $tmr-black: #1b1b1b;
 $tmr-white: rgb(255, 255, 255);
 $tmr-offwhite: #F1F1F1;
+$tmr-background-light: $tmr-offwhite;
 $tmr-brown: #614700;
 $tmr-grey: grey;
 $tmr-light-grey: rgb(213, 213, 213); 
 $tmr-focus: rgb(228, 91, 0);
+$tmr-blur:rgb(172 68 0);
 $tmr-hover: rgb(0, 228, 190);
+
+// typography color
+$tmr-dark-type: #1b1b1b;
+$tmr-light-type: #F1F1F1;
+$tmr-typography: $tmr-dark-type;
+
+// Input fill 
+$tmr-dark-fill: #1b1b1b;
+$tmr-light-fill: #e5e5e5;
+$tmr-input-fill: $tmr-light-fill;
+// Input text 
+$tmr-dark-text: #1b1b1b;
+$tmr-light-text: $tmr-offwhite;
+$tmr-input-text: $tmr-light-text;
+
+
 
 

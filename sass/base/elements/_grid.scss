@@ -9,6 +9,6 @@
     }
 
     @include desktopQuery {
-        @include desktopPadding
+       padding: 4rem;
     }
 }

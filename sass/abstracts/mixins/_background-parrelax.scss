@@ -1,0 +1,25 @@
+@mixin heroParrelax {
+	
+      width: 100%;
+      min-height: 66vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      background-attachment: scroll;
+      @include desktopQuery {
+        background-attachment: fixed;
+      }
+}
+@mixin backgroundParrelax {
+	
+      width: 100%;
+      min-height: 35rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      background-attachment: scroll;
+      @include desktopQuery {
+		min-height: 41rem;
+        background-attachment: fixed;
+      }
+}

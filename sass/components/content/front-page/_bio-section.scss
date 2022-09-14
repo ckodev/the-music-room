@@ -7,12 +7,12 @@
 
         margin: 2rem 0;
 
-        &::before {
-            content: "";
-        }
+        // &::before {
+        //     content: "";
+        // }
 
         .grid-container {
-            @include desktopQuery {
+            @include bioDesktop {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 justify-content: center;
@@ -35,20 +35,15 @@
                 position: relative;
                 margin: auto;
                 max-width: 100%;
-                margin-top: 1rem;
-                margin-bottom: 1rem;
         
                 img {
                     display: block;
                     margin: auto;
-                    border-radius: 50%;
+                    border-radius: 20px;
                     object-position: 3% 50%;
                     object-fit: cover;
-                    aspect-ratio: 1/1;
-                    width: 90%;
-                    @include tabletQuery {
-                        width: 75%;
-                    }
+                    // aspect-ratio: 1/1;
+                    width: 100%;
                     @include desktopQuery {
                         width: 100%;
                     }

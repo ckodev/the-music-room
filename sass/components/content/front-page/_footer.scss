@@ -2,37 +2,52 @@ footer {
 
     .site-info {
         .footer-nav-container {
+            display: flex;
             position: relative;
             margin: 0 1rem;
             padding: 1rem 0;
-
-            .attachment-full.size-full {
-                position: absolute;
-                right: 0;
-                width: 3rem;
-                z-index: 200;
-                align-self: center;
-                img {
-                    width: 100%;
-                    vertical-align: middle;
+            .footer-text-container {
+                @include largeTabletQuery {
+                    display: flex;
+                    flex-grow: 1;
                 }
             }
-            // save this for when more pages get added
-            // .custom-logo-link {
-            //     position: absolute;
-            //     right: 0;
-            //     width: 3rem;
-            //     z-index: 200;
-            //     align-self: center;
-            //     img {
-            //         width: 100%;
-            //         vertical-align: middle;
-            //     }
-            // }
+
+            .footer-logo-container {
+                order: 2;
+                flex-grow: 1;
+                text-align: end;
+                .attachment-thumbnail.size-thumbnail {
+                    width: 5rem;
+                        @include largeTabletQuery {
+                            width: 6rem;
+                        }
+                        @include desktopQuery {
+                            width: 7rem;
+                        }
+                    z-index: 200;
+                    align-self: center;
+                    img {
+                        width: 100%;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            
+        
 
             .footer-nav {
-                padding-bottom: 1rem;  
+                padding-bottom: 1rem; 
+                @include largeTabletQuery {
+                    &:nth-of-type(1) {
+                        margin-left: 6rem;
+                        order: 2;
+                    }
+                }
+                
             }
+            
             
             h2 {
                 text-transform: uppercase;
@@ -40,7 +55,7 @@ footer {
                 margin: 0;
                 font-weight: bold;
                 font-size: 1.3rem;
-                color: $tmr-offwhite;
+                color: $tmr-typography;
             }
     
             ul {
@@ -64,7 +79,7 @@ footer {
                 li {
         
                     a{
-                        color: $tmr-offwhite;
+                        color: $tmr-typography;
                         text-decoration: none;
                     }
                 }

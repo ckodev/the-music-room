@@ -14,40 +14,42 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-info grid">
 				<div class="footer-nav-container">
-					<div>
+					<div class="footer-logo-container">
 						<?php
 						// the_custom_logo();
-						echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'full' )
+						echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
 						?>
 					</div>
-					<div class="footer-nav">
-						<h2>Info</h2>
-						<nav class="footer-menu">
-							<?php wp_nav_menu(array('theme_location' => 'footer')) ; ?>
-						</nav>
-					</div>
-					<div class="footer-nav">
-						<h2>Contact</h2>
-						<nav class="footer-menu">
-							<ul>
-								<?php
-								if (function_exists('get_fields')) {
-									$page_id = 31;
-									if (get_field('email', $page_id)) {
-										?>
-										<li><a href="mailto:<?php the_field('email', $page_id) ?>"><?php the_field('email', $page_id) ?></a></li>
-										<?php
+					<div class="footer-text-container">
+						<div class="footer-nav">
+							<h2>Info</h2>
+							<nav class="footer-menu">
+								<?php wp_nav_menu(array('theme_location' => 'footer')) ; ?>
+							</nav>
+						</div>
+						<div class="footer-nav">
+							<h2>Contact</h2>
+							<nav class="footer-menu">
+								<ul>
+									<?php
+									if (function_exists('get_fields')) {
+										$page_id = 31;
+										if (get_field('email', $page_id)) {
+											?>
+											<li><a href="mailto:<?php the_field('email', $page_id) ?>"><?php the_field('email', $page_id) ?></a></li>
+											<?php
+										}
+										if (get_field('phone_number', $page_id)) {
+											?>
+											<li class="on-desktop"><?php the_field('phone_number', $page_id) ?></li>
+											<li class="on-mobile"><a href="tel:+<?php the_field('phone_number', $page_id) ?>"><?php the_field('phone_number', $page_id) ?></a></li>
+											<?php
+										}
 									}
-									if (get_field('phone_number', $page_id)) {
-										?>
-										<li class="on-desktop"><?php the_field('phone_number', $page_id) ?></li>
-										<li class="on-mobile"><a href="tel:+<?php the_field('phone_number', $page_id) ?>"><?php the_field('phone_number', $page_id) ?></a></li>
-										<?php
-									}
-								}
-								?>
-							</ul>
-						</nav>
+									?>
+								</ul>
+							</nav>
+						</div>
 					</div>
 				</div>
 

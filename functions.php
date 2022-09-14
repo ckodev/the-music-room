@@ -141,6 +141,7 @@ add_action( 'widgets_init', 'tmr_widgets_init' );
 function tmr_scripts() {
 	wp_enqueue_style( 'tmr-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'tmr-style', 'rtl', 'replace' );
+	wp_enqueue_script( 'tmr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	// UIKIT
 		// scripts
@@ -152,15 +153,18 @@ function tmr_scripts() {
 
 	// custom modal script - front-page id = 31
 	if (is_page(31)) {
-		wp_enqueue_script( 'tmr-custom-modal', get_template_directory_uri() . '/js/custom-modal.js', array('uikit'), _S_VERSION, true );
+		wp_enqueue_script( 'tmr-custom-modal', get_template_directory_uri() . '/js/custom-modal.js', array(), _S_VERSION, true );
 	}
+	// Custom Nav Script
+	wp_enqueue_script( 'tmr-custom-nav', get_template_directory_uri() . '/js/custom-nav.js', array(), _S_VERSION, true );
 
+	// google font 'Mulish'
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap', array(), null ); 
+	// google font 'Oswald'
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap', array(), null ); 
+	// google font 'Montserrat'
+	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet', array(), null ); 
 
-	
-
-
-
-	wp_enqueue_script( 'tmr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

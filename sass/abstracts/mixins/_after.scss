@@ -1,0 +1,8 @@
+@mixin After {
+    content: "";
+    margin: 1rem 0;
+    height: 1px;
+    display: block;
+    width: 100%;
+    background-color: $tmr-typography;
+}

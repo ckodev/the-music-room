@@ -1,0 +1,9 @@
+@mixin borderRadiusHeavy {
+    border-radius: 20px;
+}
+@mixin borderRadiusMedium {
+    border-radius: 12px;
+}
+@mixin borderRadiusLight {
+    border-radius: 5px;
+}
