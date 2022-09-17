@@ -11,16 +11,17 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info grid">
-				<div class="footer-nav-container">
-					<div class="footer-logo-container">
+	<footer id="colophon trigger-bottom" class="site-footer">
+		<div  class="site-info grid">
+				<div class="footer-nav-container" data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#trigger-bottom"
+     				data-aos-anchor-placement="top-down" data-aos-offset="-75">
+					<div class="footer-logo-container" >
 						<?php
 						// the_custom_logo();
 						echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
 						?>
 					</div>
-					<div class="footer-text-container">
+					<div class="footer-text-container" >
 						<div class="footer-nav">
 							<h2>Info</h2>
 							<nav class="footer-menu">

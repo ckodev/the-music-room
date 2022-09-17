@@ -74,9 +74,60 @@
                 .play-button-container {
                     position: absolute;
                     display: flex;
-                    top: 7%;
-                    left: 7%;
                     justify-content: flex-start;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    .artist-play-container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 90%;
+                        margin: auto;
+                        background-color: black;
+                        box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
+                        border-radius: 60px;
+                        margin-bottom: 8%;
+                        @include mobileLargeQuery {
+                            margin-bottom: 7%;
+                        }
+                        @include tabletQuery {
+                            margin-bottom: 5%;
+                        }
+                        padding: 0 0.3rem;
+                        @include mobileMediumQuery {
+                            padding: 0.1rem 0.3rem;
+                        }
+                        @include mobileLargeQuery {
+                            padding: 0.35rem;
+                        }
+                        @include tabletQuery {
+                            padding: 0.5rem;
+                        }
+                        @include desktopQuery {
+                            visibility: hidden;
+                        }
+
+                        .artist-name {
+                            margin: 0;
+                            text-align: left;
+                            color: $tmr-white;
+                            flex: 1 1 100%;
+                            font-size: .5rem;
+                            @include mobileMediumQuery {
+                                font-size: .6rem;
+                            }
+                            @include mobileLargeQuery {
+                                font-size: .7rem;
+                            }
+                            @include tabletQuery {
+                                font-size: .9rem;
+                            }
+                            white-space: nowrap;
+                            width: 75%;
+                            overflow: hidden;
+                        }
+                    }
 
                     @include desktopQuery {
                         display: flex;
@@ -91,16 +142,28 @@
                             .play-button {
                                 display: block;
                             }
+
+                            .artist-name {
+                                display: block;
+                            }
+                            .artist-play-container {
+                                visibility: visible;
+                            }
                         }
 
                         .play-button {
                             display: none;
                             width: 20%;
                         }
+                        .artist-name {
+                            display: none;
+                            align-self: center;
+                        }
+
+                        
                     }
                     .play-button {
-                        
-                        width: 20%;
+                        width: 25%;
 
                         g {
                             fill: rgb($tmr-focus,0.85);
@@ -108,6 +171,9 @@
                         }
     
                     }
+                    
+
+                    
                 }
 
                 .uk-button.uk-button-default {

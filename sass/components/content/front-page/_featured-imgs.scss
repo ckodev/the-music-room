@@ -3,15 +3,18 @@
 
   .featured-image-parralax {
     @include backgroundParrelax;
+    justify-content: center;
+    display: flex;
   }
 
-    img {
-      display: none;
-      width: 100%;
-      min-height: 35rem;
-      object-fit: cover;
-      object-position: 30% 50%;
-      aspect-ratio: 16/9;
+  .featured-img-logo {
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    width: 4rem;
+    @include desktopQuery {
+      width: 5rem;
     }
-  
   }
+}

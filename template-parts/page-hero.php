@@ -23,12 +23,12 @@
                 
                 if (get_field('hero_text_mobile')) {
                     ?>
-                    <h2 class="mobile-heading"><?php the_field('hero_text_mobile'); ?></h2>
+                    <h2 class="mobile-heading" ><?php the_field('hero_text_mobile'); ?></h2>
                     <?php
                 }
                 if (get_field('hero_text_desktop')) {
                     ?>
-                    <h2 class="desktop-heading"><?php the_field('hero_text_desktop'); ?></h2>
+                    <h2 class="desktop-heading" ><?php the_field('hero_text_desktop'); ?></h2>
                     <?php
                 }
             }

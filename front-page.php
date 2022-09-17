@@ -29,7 +29,7 @@ get_header();
 				// ****************************************************//
 				?>
 				<section id="bio" class="bio-section">
-					<article class="bio-container">
+					<article class="bio-container" >
 						<?php
 						if (get_field('bio_heading')) {
 							?>
@@ -38,7 +38,8 @@ get_header();
 						}
 						?>
 						
-						<div class="bio-text-container">
+						<div class="bio-text-container" data-aos="fade-left" data-aos-duration="800" data-aos-anchor="#bio"
+     												data-aos-anchor-placement="top-bottom" data-aos-offset="-75">
 
 							<div class="grid-container">
 								<div class="name-titles-container grid">
@@ -88,8 +89,14 @@ get_header();
 						if (get_field('featured_image_one')) {
 								$image = get_field('featured_image_one');
 								if( !empty($image) ): ?>
-									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
 									<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
+										<div class="featured-img-logo">
+										<?php
+										// the_custom_logo();
+										echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
+										?>
+										</div>
+									</div>
 								<?php endif; ?>
 							<?php
 						}
@@ -106,7 +113,7 @@ get_header();
 							
 							?>
 					
-						<div class="clients-container">
+						<div class="clients-container" data-aos="fade-right" data-aos-duration="800">
 							<div class="clients-text-container grid">
 								<?php
 								if (get_field('clients-heading')) {
@@ -140,13 +147,16 @@ get_header();
 												<li>
 													<a class="uk-button uk-button-default" href="#modal-center<?php echo $post->ID ?>" uk-toggle><?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
 														<div class="play-button-container">
-															<svg class="play-button" xmlns="http://www.w3.org/2000/svg" width="656" height="656" viewBox="0 0 656 656">
-																<g id="Ellipse_30" data-name="Ellipse 30" transform="translate(656) rotate(90)" fill="red" stroke="#707070" stroke-width="1">
-																	<circle cx="328" cy="328" r="328" stroke="none"/>
-																	<circle cx="328" cy="328" r="327.5" fill="none"/>
-																</g>
-																<path id="Polygon_1" data-name="Polygon 1" d="M134.346,14.948a10,10,0,0,1,17.309,0L277.31,231.99A10,10,0,0,1,268.656,247H17.344A10,10,0,0,1,8.69,231.99Z" transform="translate(499 185) rotate(90)"/>
-															</svg>
+															<div class="artist-play-container">
+																<svg class="play-button" xmlns="http://www.w3.org/2000/svg" width="656" height="656" viewBox="0 0 656 656">
+																	<g id="Ellipse_30" data-name="Ellipse 30" transform="translate(656) rotate(90)" fill="red" stroke="#707070" stroke-width="1">
+																		<circle cx="328" cy="328" r="328" stroke="none"/>
+																		<circle cx="328" cy="328" r="327.5" fill="none"/>
+																	</g>
+																	<path id="Polygon_1" data-name="Polygon 1" d="M134.346,14.948a10,10,0,0,1,17.309,0L277.31,231.99A10,10,0,0,1,268.656,247H17.344A10,10,0,0,1,8.69,231.99Z" transform="translate(499 185) rotate(90)"/>
+																</svg>
+																<p class="artist-name"><?php the_title() ?></p>
+															</div>
 														</div>
 													</a>
 													<?php
@@ -186,8 +196,15 @@ get_header();
 					if (get_field('featured_image_two')) {
 						$image = get_field('featured_image_two');
 						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+							
 							<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
+								<div class="featured-img-logo">
+										<?php
+										// the_custom_logo();
+										echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
+										?>
+								</div>
+							</div>
 						<?php endif; ?>
 					<?php
 					?>
@@ -200,7 +217,7 @@ get_header();
 				?>
 				<section id="contact" class="contact-form-section">
 					<article>
-						<div class="contact-container">
+						<div class="contact-container" data-aos="fade-left" data-aos-duration="800">
 							<div class="contact-text-container grid">
 							<?php
 							if (get_field('contact_heading')) {
@@ -239,8 +256,15 @@ get_header();
 					if (get_field('featured_image_three')) {
 						$image = get_field('featured_image_three');
 						if( !empty($image) ): ?>
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+							
 							<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
+								<div class="featured-img-logo">
+									<?php
+									// the_custom_logo();
+									echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
+									?>
+								</div>
+							</div>
 						<?php endif; ?>
 					<?php
 					}

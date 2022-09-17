@@ -6,6 +6,19 @@ body.page-template-default {
 	// background-color: $tmr-background-light; // Light theme
 	color: $tmr-typography;
 	font-family: $tmr-font-primary;
+
+	.site-main {
+		overflow-y: hidden;
+		overflow-x: hidden;
+	}
+	.site-header {
+		
+
+	}
+	.site-footer {
+		overflow-y: hidden;
+	}
+	
 }
 
 

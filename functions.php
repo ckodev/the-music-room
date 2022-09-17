@@ -158,6 +158,10 @@ function tmr_scripts() {
 	// Custom Nav Script
 	wp_enqueue_script( 'tmr-custom-nav', get_template_directory_uri() . '/js/custom-nav.js', array(), _S_VERSION, true );
 
+	// animate on scroll
+	wp_enqueue_script( 'tmr-AOS','https://unpkg.com/aos@2.3.4/dist/aos.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tmr-AOS-init', get_template_directory_uri() . '/js/AOS.js', array('tmr-AOS'), _S_VERSION, true );
+
 	// google font 'Mulish'
 	wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap', array(), null ); 
 	// google font 'Oswald'

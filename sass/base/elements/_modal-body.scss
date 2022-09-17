@@ -1,11 +1,16 @@
 .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical {
     border-radius: 15px;
-    padding: 2rem;
-    // background: #00000000;
-    // backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    // background-color: rgb($tmr-focus,0.6);
+    // backdrop-filter: blur(7px);
 
     iframe {
         border-radius: 10px;
 
+    }
+
+    .uk-modal-close-default.uk-icon.uk-close {
+        top: 5px;
+        right: 5px;
     }
 }

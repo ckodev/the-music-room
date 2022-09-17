@@ -11,8 +11,11 @@
 }
 
 // Media Queries
+@mixin mobileMediumQuery {
+    @media (min-width: 23em) { @content; }
+}
 @mixin mobileLargeQuery {
-    @media (min-width: 28em) { @content; }
+    @media (min-width: 26em) { @content; }
 }
 @mixin tabletQuery {
     @media (min-width: 37.5em) { @content; }
