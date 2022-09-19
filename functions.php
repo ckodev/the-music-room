@@ -142,6 +142,9 @@ function tmr_scripts() {
 	wp_enqueue_style( 'tmr-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'tmr-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'tmr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	
+	// javascript library 
+	wp_enqueue_script( 'underscore' );
 
 	// UIKIT
 		// scripts
@@ -149,7 +152,6 @@ function tmr_scripts() {
 		wp_enqueue_script( 'uikit-icons', 'https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/js/uikit-icons.min.js', array(), _S_VERSION, true );
 		// styles
 		wp_enqueue_style( 'uikit', 'https://cdn.jsdelivr.net/npm/uikit@3.15.6/dist/css/uikit.min.css', array(), _S_VERSION  );
-
 
 	// custom modal script - front-page id = 31
 	if (is_page(31)) {

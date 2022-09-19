@@ -28,7 +28,7 @@ get_header();
 				// Bio Section ****************************************//
 				// ****************************************************//
 				?>
-				<section id="bio" class="bio-section">
+				<section id="bio" class="bio-section scroll-section">
 					<article class="bio-container" >
 						<?php
 						if (get_field('bio_heading')) {
@@ -38,7 +38,7 @@ get_header();
 						}
 						?>
 						
-						<div class="bio-text-container" data-aos="fade-left" data-aos-duration="800" data-aos-anchor="#bio"
+						<div class="bio-text-container" data-aos="fade-right" data-aos-duration="800" data-aos-anchor="#bio"
      												data-aos-anchor-placement="top-bottom" data-aos-offset="-75">
 
 							<div class="grid-container">
@@ -107,7 +107,7 @@ get_header();
 				// Clients Section ************************************//
 				// ****************************************************//
 				?>
-				<section id="clients" class="clients-section">
+				<section id="clients" class="clients-section scroll-section">
 				<article>
 					<?php
 							
@@ -215,9 +215,9 @@ get_header();
 				// Contact Form Section *******************************//
 				// ****************************************************//
 				?>
-				<section id="contact" class="contact-form-section">
+				<section id="contact" class="contact-form-section scroll-section">
 					<article>
-						<div class="contact-container" data-aos="fade-left" data-aos-duration="800">
+						<div class="contact-container" data-aos="fade-right" data-aos-duration="800">
 							<div class="contact-text-container grid">
 							<?php
 							if (get_field('contact_heading')) {

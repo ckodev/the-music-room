@@ -1590,6 +1590,12 @@ header .custom-nav .custom-nav-container .nav-items {
 header .custom-nav .custom-nav-container .nav-items.open {
 	display: block;
 }
+header .custom-nav .custom-nav-container .nav-items.open.active {
+	background-color: white;
+}
+header .custom-nav .custom-nav-container .nav-items.open.active svg {
+	fill: black;
+}
 header .custom-nav .custom-nav-container .nav-items .flex-box {
 	display: flex;
 	align-items: center;
@@ -1603,177 +1609,6 @@ header .custom-nav .custom-nav-container .nav-items .flex-box a svg {
 	height: 0.75rem;
 	width: 0.75rem;
 	fill: #F1F1F1;
-}
-
-.main-navigation {
-	position: absolute;
-	z-index: 100;
-	top: 0;
-	justify-content: space-between;
-	display: flex;
-	flex-grow: 1;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.4705882353), transparent);
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-}
-@media (min-width: 64em) {
-	.main-navigation {
-		padding-right: 0.5rem;
-		padding-left: 0.5rem;
-	}
-}
-@media (min-width: 48em) {
-	.main-navigation {
-		width: 100%;
-	}
-}
-.main-navigation .attachment-full.size-full {
-	width: 3rem;
-	z-index: 200;
-	align-self: center;
-}
-@media (min-width: 64em) {
-	.main-navigation .attachment-full.size-full {
-		width: 5rem;
-	}
-}
-.main-navigation .attachment-full.size-full img {
-	width: 100%;
-	vertical-align: middle;
-}
-.main-navigation .page-title {
-	margin-left: 1rem;
-	color: rgb(255, 255, 255);
-	font-size: 1rem;
-}
-.main-navigation .site-branding {
-	display: flex;
-	padding: 1rem;
-}
-.main-navigation .hamburger-icon .line {
-	width: 35px;
-	height: 2px;
-	background-color: rgb(255, 255, 255);
-	display: block;
-	margin: 8px auto;
-	transition: all 0.3s ease-in-out;
-}
-.main-navigation .hamburger-icon .line:nth-child(2).active-burger {
-	width: 0;
-}
-.main-navigation .hamburger-icon .line:nth-child(1).active-burger {
-	transform: translateY(10px) rotate(45deg);
-	background-color: #F1F1F1;
-	width: 25px;
-}
-.main-navigation .hamburger-icon .line:nth-child(3).active-burger {
-	transform: translateY(-10px) rotate(-45deg);
-	background-color: rgb(255, 255, 255);
-	width: 25px;
-}
-.main-navigation .menu-toggle {
-	border: none;
-	background: none;
-	display: block;
-	cursor: pointer;
-	padding: 1rem;
-}
-@media (min-width: 37.5em) {
-	.main-navigation .menu-toggle {
-		margin: 0;
-	}
-}
-@media (min-width: 64em) {
-	.main-navigation .menu-toggle {
-		display: none;
-	}
-}
-.main-navigation .menu-header-menu-container {
-	transition: all 0.2s ease-in-out;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -1000px;
-	background-color: rgba(27, 27, 27, 0.75);
-	z-index: 80;
-	width: 100%;
-	margin-top: 0;
-}
-@media (min-width: 64em) {
-	.main-navigation .menu-header-menu-container {
-		position: initial;
-		background: none;
-		left: initial;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
-	}
-	.main-navigation .menu-header-menu-container .nav-menu {
-		padding: 1rem;
-		display: flex;
-		flex-direction: row;
-	}
-}
-.main-navigation .nav-menu {
-	padding: 5rem 0rem 2rem 0rem;
-	text-align: center;
-}
-.main-navigation .nav-menu li {
-	font-size: 1.5rem;
-	font-family: "Mulish", sans-serif;
-}
-@media (min-width: 64em) {
-	.main-navigation .nav-menu li {
-		margin-left: 1rem;
-	}
-}
-.main-navigation .nav-menu li a {
-	text-decoration: none;
-	padding: 0.5rem 1rem;
-}
-@media (min-width: 64em) {
-	.main-navigation .nav-menu li a {
-		color: #1b1b1b;
-		background: rgba(241, 241, 241, 0.9);
-		border-radius: 8px;
-	}
-}
-.main-navigation .nav-menu li a:hover {
-	text-decoration: underline;
-}
-
-.toggled .menu-toggle {
-	z-index: 99;
-}
-.toggled .menu-header-menu-container {
-	transition: all 0.2s ease-in-out;
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	left: 0;
-	z-index: 80;
-	width: 100%;
-}
-@media (min-width: 64em) {
-	.toggled .menu-header-menu-container {
-		display: none;
-	}
-}
-.toggled .nav-menu {
-	padding: 5rem 0rem 2rem 0rem;
-	text-align: center;
-}
-.toggled .nav-menu li {
-	font-size: 2rem;
-}
-.toggled .nav-menu li a {
-	color: rgb(255, 255, 255);
-	padding: 1rem;
-}
-.toggled .nav-menu li a:hover {
-	color: rgb(228, 91, 0);
-	text-decoration: none;
 }
 
 /* Posts and pages
