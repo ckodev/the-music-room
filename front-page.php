@@ -39,7 +39,7 @@ get_header();
 						?>
 						
 						<div class="bio-text-container" data-aos="fade-right" data-aos-duration="800" data-aos-anchor="#bio"
-     												data-aos-anchor-placement="top-bottom" data-aos-offset="-75">
+     												data-aos-anchor-placement="top-bottom" >
 
 							<div class="grid-container">
 								<div class="name-titles-container grid">

@@ -54,7 +54,11 @@
                             border: none;
                             color: $tmr-dark-text;
                             @include borderRadiusLight;
+                            &:focus {
+                                border: 1px dotted $tmr-focus;
+                            }
                         }
+                        
     
                         .wpforms-field-label {
                             font-weight: normal;

@@ -3,6 +3,22 @@ const navLiS = document.getElementsByClassName('nav-items');
 const navClose = document.getElementById('nav-close');
 const navOpen = document.getElementById('nav-open');
 
+const navButton = document.getElementById('nav-button');
+navButton.addEventListener("keydown", toggleNav, true);
+
+function toggleNav(event) {
+    if (event.key === 'Enter') {
+        for (let i = 0; i < navLiS.length; i++) {
+            if (navLiS[i].classList.contains('open')) {
+                closeNav();
+            } else {
+                openNav();
+            }
+        }
+    }
+    
+}
+
 navOpen.addEventListener('click', openNav, true);
 function openNav() {
     for (let i = 0; i < navLiS.length; i++) {
@@ -42,7 +58,7 @@ let section = document.querySelectorAll('.scroll-section');
         window.onscroll = _.throttle( () => {
             section.forEach(sec => {
                 let top = window.scrollY;
-                let offset = sec.offsetTop - 200;
+                let offset = sec.offsetTop - 175;
                 let height = sec.offsetHeight;
                 let id = sec.getAttribute('id');
 

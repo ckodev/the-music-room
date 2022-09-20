@@ -1,19 +1,5 @@
 @mixin heroParrelax {
       width: 100%;
-      @include desktopQuery {
-            @keyframes heroVH {
-                  0% {min-height: 100vh;}
-                  100% { min-height: 50vh;}
-            }
-                  min-height: 100vh;
-                  animation-name: heroVH;
-                  animation-fill-mode: forwards;
-                  animation-duration: 2.3s;
-                  animation-timing-function: cubic-bezier(0.46, 0.03, 0.52, 0.96);
-                  animation-iteration-count: 1;
-                  animation-delay: 0s;
-                  animation-direction: normal;
-      }
       @keyframes heroOpacity {
             0% {opacity: 0;}
             100% { opacity: 1;}
@@ -29,10 +15,13 @@
             animation-iteration-count: 1;
             animation-direction: normal;
 
-      min-height: 50vh;
+      min-height: 90vh;
+      @include desktopQuery {
+            min-height: 100vh;   
+      }
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: top center;
+      background-position: 90% 50%;
       background-attachment: scroll;
       @include desktopQuery {
         background-attachment: fixed;

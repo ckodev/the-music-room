@@ -180,6 +180,9 @@
                     width: 100%;
                     border: none;
                     padding: 0;
+                    &:focus {
+                        border: 1px dashed $tmr-focus;
+                    }
                 }
 
                 img {

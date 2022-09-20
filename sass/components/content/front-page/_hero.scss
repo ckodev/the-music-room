@@ -25,31 +25,38 @@
         
       h2 {
         color: $tmr-white;
-        font-size: 3rem;
+        font-size: 5rem;
+        line-height: 5rem;
         font-weight: bold;
         font-family: $tmr-accent-2;
         margin: 0;
         padding: 1rem;
+        @include mobileLargeQuery {
+          font-size: 6rem;
+          line-height: 6rem;
+        }
         @include tabletQuery {
-          font-size: 4rem;
+          font-size: 6rem;
+          line-height: 6rem;
         }
         @include largeTabletQuery {
-          font-size: 5rem;
+          font-size: 7rem;
         }
         @include desktopQuery {
-          font-size: 6rem;
-          padding-left: 2rem;
+         font-size: 8rem;
+         margin-bottom: .75rem;
+         margin-left: .5rem;
         }
       }
       .desktop-heading {
         display: none;
-        @include tabletQuery {
+        @include desktopQuery {
           display: block;
         }
       }
       .mobile-heading {
         display: block;
-        @include tabletQuery {
+        @include desktopQuery {
           display: none;
         }
       }
