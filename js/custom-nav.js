@@ -67,7 +67,6 @@ let section = document.querySelectorAll('.scroll-section');
                     const grandparent = target.parentElement; 
                     activeLink(grandparent);
                 }
-                console.log(top)
+         
             })
-        }, 500);
-
+        }, 300);
