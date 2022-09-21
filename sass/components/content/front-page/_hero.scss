@@ -13,6 +13,12 @@
         bottom: 0;
         left: 0;
         padding-bottom: 0;
+        @include largeTabletQuery {
+          margin: 1rem;
+        }
+        @include desktopQuery {
+          margin: 2rem;
+        }
 
         
         

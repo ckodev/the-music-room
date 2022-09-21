@@ -1556,7 +1556,7 @@ header .custom-nav .nav-button {
 	height: 100%;
 }
 @media (min-width: 64em) {
-	header .custom-nav .nav-button:focus {
+	header .custom-nav .nav-button:active {
 		outline: 0.5px dashed white;
 	}
 }
@@ -1757,6 +1757,16 @@ section article h3 {
 	bottom: 0;
 	left: 0;
 	padding-bottom: 0;
+}
+@media (min-width: 48em) {
+	.hero-container .hero-text-container {
+		margin: 1rem;
+	}
+}
+@media (min-width: 64em) {
+	.hero-container .hero-text-container {
+		margin: 2rem;
+	}
 }
 .hero-container .hero-text-container .hero-logo-container {
 	width: 5rem;
