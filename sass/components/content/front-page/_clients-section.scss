@@ -79,6 +79,7 @@
                     left: 0;
                     width: 100%;
                     .artist-play-container {
+                        
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -125,7 +126,14 @@
                             }
                             white-space: nowrap;
                             width: 75%;
-                            overflow: hidden;
+                            overflow-x: scroll;
+                            // remove scroll bar 
+                                &::-webkit-scrollbar { /* WebKit */
+                                    width: 0;
+                                    height: 0;
+                                }
+                                scrollbar-width: none; /* Firefox */
+                                -ms-overflow-style: none;  /* Internet Explorer 10+ */
                         }
                     }
 

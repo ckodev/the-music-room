@@ -17,11 +17,10 @@ header {
         animation-direction: normal;
 
 
-    float: right;
+    
     height: 0;
     width: fit-content;
-    position: sticky;
-    position: -webkit-sticky;
+    position: fixed;
     top: 0;
     right: 0;
     display: flex;

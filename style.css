@@ -1506,13 +1506,11 @@ header {
 	        animation-delay: 1s;
 	-webkit-animation-direction: normal;
 	        animation-direction: normal;
-	float: right;
 	height: 0;
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
-	position: sticky;
-	position: -webkit-sticky;
+	position: fixed;
 	top: 0;
 	right: 0;
 	display: flex;
@@ -1963,7 +1961,9 @@ section article h3 {
 	font-size: 0.5rem;
 	white-space: nowrap;
 	width: 75%;
-	overflow: hidden;
+	overflow-x: scroll;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
 }
 @media (min-width: 23em) {
 	.clients-section .clients-examples-container ul li .play-button-container .artist-play-container .artist-name {
@@ -1979,6 +1979,10 @@ section article h3 {
 	.clients-section .clients-examples-container ul li .play-button-container .artist-play-container .artist-name {
 		font-size: 0.9rem;
 	}
+}
+.clients-section .clients-examples-container ul li .play-button-container .artist-play-container .artist-name::-webkit-scrollbar { /* WebKit */
+	width: 0;
+	height: 0;
 }
 @media (min-width: 64em) {
 	.clients-section .clients-examples-container ul li .play-button-container {

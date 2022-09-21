@@ -1,18 +1,20 @@
 body.page-template-default {
+	// * {
+	// 	border: 1px solid red !important;
+	//   }
+
 	position: relative;
 	margin: auto;
     max-width: 2000px;
-	// background: $tmr-black; // Dark Theme.
-	// background-color: $tmr-background-light; // Light theme
 	color: $tmr-typography;
 	font-family: $tmr-font-primary;
 
 	.site-main {
 		overflow-y: hidden;
 		overflow-x: hidden;
+		
 	}
 	.site-header {
-		
 
 	}
 	.site-footer {
