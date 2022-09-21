@@ -51,8 +51,7 @@ let section = document.querySelectorAll('.scroll-section');
         }
         lists.forEach((item) =>
             item.addEventListener('click', function(){
-                activeLink(this);
-                
+                activeLink(this); 
             }));
 
         window.onscroll = _.throttle( () => {

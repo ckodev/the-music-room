@@ -98,12 +98,15 @@ header {
                             fill:black;
                         }
                     }
-
+                    
                     &:hover {
-                        background-color: white;
-                        svg {
-                            fill:black;
+                        @include desktopQuery {
+                            background-color: white;
+                            svg {
+                                fill:black;
+                            }
                         }
+                        
                     }
                 }
                 

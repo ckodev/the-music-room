@@ -1603,11 +1603,13 @@ header .custom-nav .custom-nav-container .nav-items.open.active {
 header .custom-nav .custom-nav-container .nav-items.open.active svg {
 	fill: black;
 }
-header .custom-nav .custom-nav-container .nav-items.open:hover {
-	background-color: white;
-}
-header .custom-nav .custom-nav-container .nav-items.open:hover svg {
-	fill: black;
+@media (min-width: 64em) {
+	header .custom-nav .custom-nav-container .nav-items.open:hover {
+		background-color: white;
+	}
+	header .custom-nav .custom-nav-container .nav-items.open:hover svg {
+		fill: black;
+	}
 }
 header .custom-nav .custom-nav-container .nav-items .flex-box {
 	display: flex;
