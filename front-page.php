@@ -15,7 +15,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main  class="site-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -29,7 +29,7 @@ get_header();
 				// ****************************************************//
 				?>
 				<section id="bio" class="bio-section scroll-section">
-					<article class="bio-container" >
+					<article id="primary" class="bio-container" >
 						<?php
 						if (get_field('bio_heading')) {
 							?>
@@ -57,22 +57,26 @@ get_header();
 									}
 									if (get_field('bio')) {
 										?>
-										<p class="bio-text"><?php the_field('bio'); ?></p>
+										<p class="bio-text">
+										<?php
+										if (get_field('bio_image')) {
+												$image = get_field('bio_image');
+												if( !empty($image) ): ?>
+													<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+												<?php endif; ?>
+											<?php
+										}
+										?>
+										<?php the_field('bio'); ?>
+										
+										
+										</p>
 										<?php
 									}
 									?>
+										
 								</div>
-								<div class="bio-image-container grid">
-									<?php
-									if (get_field('bio_image')) {
-											$image = get_field('bio_image');
-											if( !empty($image) ): ?>
-												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-											<?php endif; ?>
-										<?php
-									}
-									?>
-								</div>
+								
 							</div>
 						</div>
 
@@ -193,11 +197,11 @@ get_header();
 				<section class="featured-image-section">
 					<article class="featured-image">
 					<?php
-					if (get_field('featured_image_two')) {
-						$image = get_field('featured_image_two');
+					if (get_field('featured_image_three')) {
+						$image = get_field('featured_image_three');
 						if( !empty($image) ): ?>
 							
-							<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
+							<div class="featured-image-parralax img-right-center" style="background-image: url('<?php echo $image['url']; ?>');">
 								<div class="featured-img-logo">
 										<?php
 										// the_custom_logo();
@@ -253,8 +257,8 @@ get_header();
 				<section class="featured-image-section">
 					<article class="featured-image">
 					<?php
-					if (get_field('featured_image_three')) {
-						$image = get_field('featured_image_three');
+					if (get_field('featured_image_two')) {
+						$image = get_field('featured_image_two');
 						if( !empty($image) ): ?>
 							
 							<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">

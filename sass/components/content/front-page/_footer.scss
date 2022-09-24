@@ -1,6 +1,25 @@
 footer {
 
     .site-info {
+        background-color: $tmr-black;
+
+        .ckodev {
+            margin: 0;
+            text-align: center;
+            @include largeTabletQuery {
+                text-align: right;
+            }
+            color: $tmr-offwhite;
+            padding: 1rem;
+            font-size: .8rem;
+            a {
+                color: rgb(0,165,255);
+                &.visited {
+                    color: rgb(0,165,255);
+                }
+            }
+        }
+
         .footer-nav-container {
             display: flex;
             position: relative;

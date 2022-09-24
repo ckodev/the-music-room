@@ -16,9 +16,7 @@
         @include largeTabletQuery {
           margin: 1rem;
         }
-        @include desktopQuery {
-          margin: 2rem;
-        }
+        
 
         
         
@@ -56,13 +54,13 @@
       }
       .desktop-heading {
         display: none;
-        @include desktopQuery {
+        @include desktopQueryHeading {
           display: block;
         }
       }
       .mobile-heading {
         display: block;
-        @include desktopQuery {
+        @include desktopQueryHeading {
           display: none;
         }
       }

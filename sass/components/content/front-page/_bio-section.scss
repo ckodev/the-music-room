@@ -12,12 +12,36 @@
         // }
 
         .grid-container {
-            @include bioDesktop {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                justify-content: center;
-                align-items: center;
+            .bio-text {
+                img {
+                    margin: 0rem auto 1rem auto;
+                    width: 100%;
+                    display: block;
+                    object-fit: cover;
+                    max-height: 25rem;
+                    object-position: 50% 30%;
+                    @include borderRadiusMedium;
+                    @include largeTabletQuery {
+                        margin-left: 1.5rem;
+                        width: 45%;
+                        float: right;
+                        max-height: 37rem;
+                    }
+                    
+                }
             }
+
+            // @include desktopQuery {
+            //     width: 80%;
+            //     margin: auto;
+            // }
+            // @include bioDesktop {
+            //     width: 100%;
+            //     display: grid;
+            //     grid-template-columns: 1fr 1fr;
+            //     justify-content: center;
+            //     align-items: center;
+            // }
 
             .name-titles-container {
                 order: 2;
@@ -35,7 +59,7 @@
                 position: relative;
                 margin: auto;
                 max-width: 100%;
-                height: 90%;
+                
         
                 img {
                     display: block;
@@ -43,12 +67,8 @@
                     border-radius: 20px;
                     object-position: 3% 50%;
                     object-fit: cover;
-                    // aspect-ratio: 1/1;
                     width: 100%;
                     height: 100%;
-                    @include desktopQuery {
-                        width: 100%;
-                    }
                 }
             }
         }

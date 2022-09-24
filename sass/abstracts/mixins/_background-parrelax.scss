@@ -37,4 +37,8 @@
       @include desktopQuery {
         background-attachment: fixed;
       }
+
+      &.img-right-center {
+            background-position: 60% 100%;
+          }
 }
