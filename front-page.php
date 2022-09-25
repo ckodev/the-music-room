@@ -164,14 +164,25 @@ get_header();
 														</div>
 													</a>
 													<?php
-													if (get_field('youtube_embed')) {
+													if (get_field('mp3')) {
+														$audio = get_field('mp3');
 													?>
 														<div id="modal-center<?php echo $post->ID ?>" class="uk-flex-top" uk-modal>
 															<div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
 																<button class="uk-modal-close-default" type="button" uk-close></button>
-																<div class="embed-container">
-																	<?php the_field('youtube_embed') ?>
-																</div>
+
+																<figure>
+																<figcaption><?php the_title() ?></figcaption>
+																	<audio id="<?php echo $post->ID ?>" class="player"
+																		controls
+																		src="<?php echo $audio['url']; ?>">
+																			<a href="<?php echo $audio['url']; ?>">
+																				Download audio
+																			</a>
+																	</audio>
+																</figure>
+																	
+																
 															</div>
 														</div>
 													<?php

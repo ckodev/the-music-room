@@ -1310,7 +1310,16 @@ table {
 .uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical .uk-modal-close-default.uk-icon.uk-close {
 	top: 5px;
 	right: 5px;
-} /* Links
+}
+.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical figcaption {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical audio {
+	width: 100%;
+}
+
+/* Links
 --------------------------------------------- */
 a {
 	color: #4169e1;
