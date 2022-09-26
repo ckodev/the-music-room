@@ -118,7 +118,7 @@ get_header();
 							?>
 					
 						<div class="clients-container" data-aos="fade-right" data-aos-duration="800">
-							<div class="clients-text-container grid">
+							<div class="clients-text-container client-grid">
 								<?php
 								if (get_field('clients-heading')) {
 									?>
@@ -142,7 +142,7 @@ get_header();
 								}
 								?>
 							</div>
-							<div class="clients-examples-container grid">
+							<div class="clients-examples-container client-grid">
 								<?php
 								$posts = get_field('clients');
 								if( $posts ): ?>

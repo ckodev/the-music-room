@@ -12,3 +12,12 @@
        padding: 4rem;
     }
 }
+
+.client-grid {
+    padding: 1rem.5rem;
+
+    @include tabletQuery {
+        padding: 0 2rem;
+    }
+  
+}
