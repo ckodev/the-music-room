@@ -1,7 +1,7 @@
 footer {
 
     .site-info {
-        background-color: $tmr-black;
+        background-color: white;
 
         .ckodev {
             margin: 0;
@@ -9,7 +9,7 @@ footer {
             @include largeTabletQuery {
                 text-align: right;
             }
-            color: $tmr-offwhite;
+            color: $tmr-dark-text;
             padding: 1rem;
             font-size: .8rem;
             a {

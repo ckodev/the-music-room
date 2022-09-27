@@ -2194,12 +2194,12 @@ section article h3 {
 }
 
 footer .site-info {
-	background-color: #1b1b1b;
+	background-color: white;
 }
 footer .site-info .ckodev {
 	margin: 0;
 	text-align: center;
-	color: #F1F1F1;
+	color: #1b1b1b;
 	padding: 1rem;
 	font-size: 0.8rem;
 }
