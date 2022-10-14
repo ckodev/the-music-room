@@ -1903,7 +1903,7 @@ section article h3 {
 	justify-content: space-between;
 }
 #client-list a .client-container .name-one {
-	border-bottom: dotted #1b1b1b;
+	border-bottom: 1.5px dotted #1b1b1b;
 	flex-grow: 1;
 	margin: 0.4rem 0 0 0;
 }
