@@ -13,6 +13,10 @@
         padding: 0;
         border: none;
         width: 100%;
+        color: black;
+        &:visited {
+            color: black;
+        }
         .client-container {
             display: flex;
             align-items: center;
