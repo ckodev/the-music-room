@@ -172,6 +172,8 @@ function tmr_scripts() {
 	wp_enqueue_style( 'montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet', array(), null ); 
 	// google font Outfit
 	wp_enqueue_style( 'Outfit', 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet', array(), null ); 
+	// google font Abyssinica
+	wp_enqueue_style( 'Outfit', 'https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet', array(), null ); 
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

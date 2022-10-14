@@ -94,12 +94,7 @@ get_header();
 								$image = get_field('featured_image_one');
 								if( !empty($image) ): ?>
 									<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
-										<div class="featured-img-logo">
-										<?php
-										// the_custom_logo();
-										echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
-										?>
-										</div>
+										
 									</div>
 								<?php endif; ?>
 							<?php
@@ -149,18 +144,26 @@ get_header();
 										<ul id="client-list">
 											<?php foreach( $posts as $post): ?>
 												<li>
-													<a class="uk-button uk-button-default" href="#modal-center<?php echo $post->ID ?>" uk-toggle><?php echo get_the_post_thumbnail( $post->ID, 'medium_large' ); ?>
-														<div class="play-button-container">
-															<div class="artist-play-container">
-																<svg class="play-button" xmlns="http://www.w3.org/2000/svg" width="656" height="656" viewBox="0 0 656 656">
-																	<g id="Ellipse_30" data-name="Ellipse 30" transform="translate(656) rotate(90)" fill="red" stroke="#707070" stroke-width="1">
-																		<circle cx="328" cy="328" r="328" stroke="none"/>
-																		<circle cx="328" cy="328" r="327.5" fill="none"/>
-																	</g>
-																	<path id="Polygon_1" data-name="Polygon 1" d="M134.346,14.948a10,10,0,0,1,17.309,0L277.31,231.99A10,10,0,0,1,268.656,247H17.344A10,10,0,0,1,8.69,231.99Z" transform="translate(499 185) rotate(90)"/>
-																</svg>
-																<p class="artist-name"><?php the_title() ?></p>
-															</div>
+													<a class="uk-button uk-button-default" href="#modal-center<?php echo $post->ID ?>" uk-toggle>
+														<div class="client-container">
+															
+															<?php 
+															if (get_field('client_name')) {
+																?><p class="artist-name"><?php the_field('client_name') ?></p><?php
+															}
+															if (get_field('song_title')) {
+																?>
+																<div class="play-button-container">
+																<p class="artist-name"><?php the_field('song_title') ?></p>
+																<button class="play-button">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>
+																</button>
+																</div>
+																
+																<?php
+															}
+															?>
+															
 														</div>
 													</a>
 													<?php
@@ -213,12 +216,7 @@ get_header();
 						if( !empty($image) ): ?>
 							
 							<div class="featured-image-parralax img-right-center" style="background-image: url('<?php echo $image['url']; ?>');">
-								<div class="featured-img-logo">
-										<?php
-										// the_custom_logo();
-										echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
-										?>
-								</div>
+								
 							</div>
 						<?php endif; ?>
 					<?php
@@ -273,12 +271,7 @@ get_header();
 						if( !empty($image) ): ?>
 							
 							<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
-								<div class="featured-img-logo">
-									<?php
-									// the_custom_logo();
-									echo wp_get_attachment_image( get_theme_mod( 'custom_logo' ), 'thumbnail' )
-									?>
-								</div>
+								
 							</div>
 						<?php endif; ?>
 					<?php
