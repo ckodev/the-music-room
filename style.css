@@ -1906,6 +1906,13 @@ section article h3 {
 	display: flex;
 	align-items: center;
 }
+#client-list a .client-container .play-button-container::before {
+	content: "";
+	border-bottom: dotted;
+	order: 1;
+	flex: 1;
+	margin-bottom: 0.25em;
+}
 #client-list a .client-container .play-button-container button {
 	display: flex;
 	height: -webkit-fit-content;
