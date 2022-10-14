@@ -149,7 +149,10 @@ get_header();
 															
 															<?php 
 															if (get_field('client_name')) {
-																?><p class="artist-name"><?php the_field('client_name') ?></p><?php
+																?>
+																<div><p class="artist-name"><?php the_field('client_name') ?></p></div>
+																<p class="name-one"></p>
+																<?php
 															}
 															if (get_field('song_title')) {
 																?>

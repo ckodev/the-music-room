@@ -1305,7 +1305,7 @@ table {
 }
 @media (min-width: 37.5em) {
 	.client-grid {
-		padding: 0 2rem;
+		padding: 1rem 2rem;
 	}
 }
 
@@ -1892,11 +1892,20 @@ section article h3 {
 	padding: 0;
 	border: none;
 	width: 100%;
+	color: black;
+}
+#client-list a:visited {
+	color: black;
 }
 #client-list a .client-container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+#client-list a .client-container .name-one {
+	border-bottom: dotted #1b1b1b;
+	flex-grow: 1;
+	margin: 0.4rem 0 0 0;
 }
 #client-list a .client-container p {
 	text-align: left;
@@ -1905,13 +1914,6 @@ section article h3 {
 #client-list a .client-container .play-button-container {
 	display: flex;
 	align-items: center;
-}
-#client-list a .client-container .play-button-container::before {
-	content: "";
-	border-bottom: dotted;
-	order: 1;
-	flex: 1;
-	margin-bottom: 0.25em;
 }
 #client-list a .client-container .play-button-container button {
 	display: flex;
