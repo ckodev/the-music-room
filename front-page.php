@@ -176,7 +176,7 @@ get_header();
 
 																<figure>
 																<figcaption><?php the_title() ?></figcaption>
-																	<audio id="<?php echo $post->ID ?>" class="player"
+																	<audio autoplay loop playsInline id="modal-center<?php echo $post->ID ?>" class="player"
 																		controls
 																		src="<?php echo $audio['url']; ?>">
 																			<a href="<?php echo $audio['url']; ?>">
