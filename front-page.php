@@ -157,10 +157,10 @@ get_header();
 															if (get_field('song_title')) {
 																?>
 																<div class="play-button-container">
-																<p class="artist-name"><?php the_field('song_title') ?></p>
-																<button class="play-button">
-																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>
-																</button>
+																	<p class="artist-name"><?php the_field('song_title') ?></p>
+																	<button class="play-button">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 22v-20l18 10-18 10z"/></svg>
+																	</button>
 																</div>
 																
 																<?php
@@ -178,7 +178,15 @@ get_header();
 																<button class="uk-modal-close-default" type="button" uk-close></button>
 
 																<figure>
-																<figcaption><?php the_title() ?></figcaption>
+																<figcaption><?php 
+																	if (get_field('client_name')) {
+																		the_field('client_name');
+																	}
+																	?> - <?php
+																	if (get_field('song_title')) {
+																		the_field('song_title');
+																	}
+																?></figcaption>
 																	<audio playsInline id="modal-center<?php echo $post->ID ?>" class="player"
 																		controls
 																		src="<?php echo $audio['url']; ?>">
