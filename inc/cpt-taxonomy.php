@@ -68,34 +68,34 @@ function tmr_register_taxonomies() {
     // *************************************************//
 
     // Add Client Type Taxonomy
-    $labels = array(
-        'name'              => _x( 'Client Types', 'taxonomy general name' ),
-        'singular_name'     => _x( 'Client Type', 'taxonomy singular name' ),
-        'search_items'      => __( 'Search Client Types' ),
-        'all_items'         => __( 'All Client Types' ),
-        'parent_item'       => __( 'Parent Client Type' ),
-        'parent_item_colon' => __( 'Parent Client Type:' ),
-        'edit_item'         => __( 'Edit Client Type' ),
-        'view_item'         => __( 'View Client Type' ),
-        'update_item'       => __( 'Update Client Type' ),
-        'add_new_item'      => __( 'Add New Client Type' ),
-        'new_item_name'     => __( 'New Client Type Name' ),
-        'menu_name'         => __( 'Client Type' ),
+    // $labels = array(
+    //     'name'              => _x( 'Client Types', 'taxonomy general name' ),
+    //     'singular_name'     => _x( 'Client Type', 'taxonomy singular name' ),
+    //     'search_items'      => __( 'Search Client Types' ),
+    //     'all_items'         => __( 'All Client Types' ),
+    //     'parent_item'       => __( 'Parent Client Type' ),
+    //     'parent_item_colon' => __( 'Parent Client Type:' ),
+    //     'edit_item'         => __( 'Edit Client Type' ),
+    //     'view_item'         => __( 'View Client Type' ),
+    //     'update_item'       => __( 'Update Client Type' ),
+    //     'add_new_item'      => __( 'Add New Client Type' ),
+    //     'new_item_name'     => __( 'New Client Type Name' ),
+    //     'menu_name'         => __( 'Client Type' ),
 
-    );
-    $args = array(
-        'hierarchical'      => true,
-        'labels'            => $labels,
-        'show_ui'           => true,
-        'show_in_menu'      => true,
-        'show_in_nav_menu'  => true,
-        'show_in_rest'      => true,
-        'show_admin_column' => true,
-        'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'client-type' ),
+    // );
+    // $args = array(
+    //     'hierarchical'      => true,
+    //     'labels'            => $labels,
+    //     'show_ui'           => true,
+    //     'show_in_menu'      => true,
+    //     'show_in_nav_menu'  => true,
+    //     'show_in_rest'      => true,
+    //     'show_admin_column' => true,
+    //     'query_var'         => true,
+    //     'rewrite'           => array( 'slug' => 'client-type' ),
         
-    );
-    register_taxonomy( 'tmr-client-type', array( 'tmr-client' ), $args );
+    // );
+    // register_taxonomy( 'tmr-client-type', array( 'tmr-client' ), $args );
 
    
 }
