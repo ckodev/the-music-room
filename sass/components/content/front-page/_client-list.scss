@@ -2,7 +2,8 @@
 .clients-container {
     @include desktopQuery {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        padding: 0 3rem;
     }
 }
 
@@ -10,10 +11,15 @@
     list-style: none;
     padding: 0%;
     a {
+        border-radius: 5px;
         padding: 0;
         border: none;
         width: 100%;
         color: black;
+        &:hover {
+            background-color: #00000014;
+            
+        }
         &:visited {
             color: black;
         }
@@ -21,6 +27,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding: 0 0.5rem;
             .name-one {
                 border-bottom: 1.5px dotted $tmr-black;
                 flex-grow: 1;
@@ -29,18 +36,35 @@
             p {
                 text-align: left;
                 text-transform: capitalize;
+                font-size: .8rem;
+                @include mobileMediumQuery {
+                    font-size: 1rem;
+                }
+                @include largeTabletQuery {
+                    font-size: 1.25rem;
+                }
             }
             .play-button-container {
                 display: flex;
                 align-items: center;
+
                 button {
+                    background-color: black;
                     display: flex;
                     height: fit-content;
                     border: none;
                     border-radius: 10px;
                     padding: 0.5rem;
+                    width: 2rem;
+                    cursor: pointer;
+                    @include mobileMediumQuery {
+                        width: initial;
+                    }
                     svg {
                         height: .9rem;
+                        path {
+                            fill: antiquewhite;
+                        }
                     }
                 }
             }

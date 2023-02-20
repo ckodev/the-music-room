@@ -20,6 +20,13 @@ get_header();
 		<?php
 		while ( have_posts() ) :
 			the_post();
+			if (function_exists('get_fields')) {
+				if (get_field('introduction')) {
+					?>
+					<div class="screen-reader-text"><?php the_field('introduction'); ?></div>
+					<?php
+				}
+			}
 
 			get_template_part( 'template-parts/page-hero' );
 
@@ -38,8 +45,7 @@ get_header();
 						}
 						?>
 						
-						<div class="bio-text-container" data-aos="fade-right" data-aos-duration="800" data-aos-anchor="#bio"
-     												data-aos-anchor-placement="top-bottom" >
+						<div class="bio-text-container" >
 
 							<div class="grid-container">
 								<div class="name-titles-container grid">
@@ -55,23 +61,33 @@ get_header();
 										<h3 class="bio-titles"><?php the_field('titles'); ?></h3>
 										<?php
 									}
+									if (get_field('bio_image')) {
+										$image = get_field('bio_image');
+										if( !empty($image) ): ?>
+											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+										<?php endif; ?>
+									<?php
+									}
 									if (get_field('bio')) {
-										?>
-										<p class="bio-text">
-										<?php
-										if (get_field('bio_image')) {
-												$image = get_field('bio_image');
-												if( !empty($image) ): ?>
-													<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
-												<?php endif; ?>
-											<?php
-										}
-										?>
-										<?php the_field('bio'); ?>
 										
-										
-										</p>
-										<?php
+										?>
+										<div class="bio-text">
+											<?php 
+											$raw_content 		= get_field( 'bio' );
+											$trimmed_content	= wp_trim_words( $raw_content, '32' );
+											$clean_excerpt		= apply_filters( 'the_excerpt', $trimmed_content );
+											?>
+											<p class="custom-excerpt">
+											<?php echo esc_attr( strip_tags($clean_excerpt) ); ?>
+											</p>
+											
+											<span class="custom-show-text"><?php the_field('bio'); ?></span>
+
+											<button class="read-more-button">[Read More...]</button>
+											
+											
+										</div>
+									<?php
 									}
 									?>
 										
@@ -94,7 +110,7 @@ get_header();
 								$image = get_field('featured_image_one');
 								if( !empty($image) ): ?>
 									<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
-										
+									<img class="screen-reader-text" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
 									</div>
 								<?php endif; ?>
 							<?php
@@ -112,7 +128,7 @@ get_header();
 							
 							?>
 					
-						<div class="clients-container" data-aos="fade-right" data-aos-duration="800">
+						<div class="clients-container" >
 							<div class="clients-text-container client-grid">
 								<?php
 								if (get_field('clients-heading')) {
@@ -227,6 +243,7 @@ get_header();
 						if( !empty($image) ): ?>
 							
 							<div class="featured-image-parralax img-right-center" style="background-image: url('<?php echo $image['url']; ?>');">
+							<img class="screen-reader-text" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
 								
 							</div>
 						<?php endif; ?>
@@ -241,7 +258,7 @@ get_header();
 				?>
 				<section id="contact" class="contact-form-section scroll-section">
 					<article>
-						<div class="contact-container" data-aos="fade-right" data-aos-duration="800">
+						<div class="contact-container" >
 							<div class="contact-text-container grid">
 							<?php
 							if (get_field('contact_heading')) {
@@ -282,6 +299,7 @@ get_header();
 						if( !empty($image) ): ?>
 							
 							<div class="featured-image-parralax" style="background-image: url('<?php echo $image['url']; ?>');">
+							<img class="screen-reader-text" src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>">
 								
 							</div>
 						<?php endif; ?>

@@ -14,7 +14,7 @@
 	<footer id="colophon trigger-bottom" class="site-footer">
 		<div  class="site-info">
 
-			<p class="ckodev">Site Design & Development: &copy; <a href="https://ckodev.com/"><strong>ckodev.com &#x1F918;</strong></a></p>
+			<p class="ckodev">Site Design & Development: &copy; <a href="https://ckodev.com/"><strong>ckodev.com</strong></a></p>
 				<!-- <div class="footer-nav-container" data-aos="fade-up" data-aos-duration="800" data-aos-anchor="#trigger-bottom"
      				data-aos-anchor-placement="top-down" data-aos-offset="-75">
 					<div class="footer-logo-container" >

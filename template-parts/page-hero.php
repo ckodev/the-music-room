@@ -16,6 +16,7 @@
         $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
         ?> 
         <div class="background-hero" style="background-image: url('<?php echo $feat_image_url; ?>');">
+        <img class="screen-reader-text" src="<?php echo $feat_image_url ?>" alt="<?php echo $image_alt ?>">
 
         <div class="hero-text-container">
             <?php

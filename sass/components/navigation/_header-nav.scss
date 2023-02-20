@@ -32,7 +32,7 @@ header {
         // background-color: rgb($tmr-blur,0.69);
         // backdrop-filter: blur(5px);
         background-color: black;
-        border: 1px solid white;
+        border: 1px solid antiquewhite;
         padding: .5rem;
         margin: 1rem;
         border-radius: 60px;
@@ -57,7 +57,7 @@ header {
                 .nav-open {
                     display: block;
                     width: 1.5rem;
-                    fill: white;
+                    fill: antiquewhite;
                     cursor: pointer;
                 }
                 .nav-close {
@@ -92,7 +92,7 @@ header {
                     display: block;
 
                     &.active {
-                        background-color: white;
+                        background-color: antiquewhite;
                         svg {
                             fill:black;
                         }
@@ -127,7 +127,7 @@ header {
                         svg {
                             height: 0.75rem;
                             width: .75rem;
-                            fill: $tmr-background-light;
+                            fill: antiquewhite;
                         }
                     }
                 } 

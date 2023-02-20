@@ -1,17 +1,18 @@
-body.page-template-default {
-	// * {
-	// 	border: 1px solid red !important;
-	//   }
 
+
+body.page-template-default {
 	position: relative;
 	margin: auto;
     max-width: 2000px;
 	color: $tmr-typography;
 	font-family: $tmr-font-primary;
 
+	
+
 	.site-main {
 		overflow-y: hidden;
 		overflow-x: hidden;
+		background-color: antiquewhite;
 		
 	}
 	.site-header {

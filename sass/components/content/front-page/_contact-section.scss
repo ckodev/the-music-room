@@ -41,7 +41,7 @@
                         input {
                             background: $tmr-input-fill;
                             border: none;
-                            color: $tmr-dark-text;
+                            color: $tmr-light-text;
                             max-width: 100%;
                             @include borderRadiusLight;
     
@@ -52,7 +52,7 @@
                         textarea {
                             background: $tmr-input-fill;
                             border: none;
-                            color: $tmr-dark-text;
+                            color: $tmr-input-text;
                             @include borderRadiusLight;
                             &:focus {
                                 border: 1px dotted $tmr-focus;
@@ -74,12 +74,14 @@
                             background: $tmr-input-fill;
                             border: none;
                             @include borderRadiusLight;
-                            color: $tmr-dark-text;
+                            color: antiquewhite;
+                            border: 1px solid black;
+                            transition: all 0.5s ease;
     
                             &:hover {
-                                background-color: $tmr-focus;
+                                background-color: transparent;
                                 color: $tmr-dark-text;
-                                border: none;
+                                border: 1px solid black;
                                 cursor: pointer;
                             }
     

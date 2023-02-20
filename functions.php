@@ -159,6 +159,7 @@ function tmr_scripts() {
 	}
 	// Custom Nav Script
 	wp_enqueue_script( 'tmr-custom-nav', get_template_directory_uri() . '/js/custom-nav.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tmr-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION );
 
 	// animate on scroll
 	wp_enqueue_script( 'tmr-AOS','https://unpkg.com/aos@2.3.4/dist/aos.js', array(), _S_VERSION, true );
@@ -195,6 +196,14 @@ function tmr_post_filter( $use_block_editor, $post ) {
     }
 }
 add_filter( 'use_block_editor_for_post', 'tmr_post_filter', 10, 2 );
+
+function custom_add_status_bar_meta_tag() {
+	echo '<meta name="theme-color" content="antiquewhite">' . "\n";
+}
+add_action( 'wp_head', 'custom_add_status_bar_meta_tag' );
+  
+  
+  
 
 /**
  * Implement the Custom Header feature.

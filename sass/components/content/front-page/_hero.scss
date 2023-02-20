@@ -4,6 +4,7 @@
 
     .background-hero {
       @include heroParrelax;
+      box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
       
     }
 
@@ -28,13 +29,14 @@
         }
         
       h2 {
-        color: $tmr-white;
+        color: antiquewhite;
         font-size: 5rem;
         line-height: 5rem;
         font-weight: bold;
         font-family: $tmr-font-primary-chad;
         margin: 0;
         padding: 1rem;
+        text-shadow: rgb(0 0 0) 0px 10px 55px, rgb(0 0 0 / 6%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 15%) 0px 12px 13px, rgb(0 0 0 / 18%) 0px -3px 5px;
         @include mobileLargeQuery {
           font-size: 6rem;
           line-height: 6rem;

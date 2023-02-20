@@ -2,6 +2,7 @@
 .featured-image-section {
 
   .featured-image-parralax {
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px, rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
     @include backgroundParrelax;
     justify-content: center;
     display: flex;

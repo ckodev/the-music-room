@@ -1,4 +1,7 @@
 .clients-section {
+    @include desktopQuery {
+        padding: 0 3rem;
+    }
 
     article {
         display: flex;
@@ -33,6 +36,7 @@
                 align-items: center;
                 
             }
+            
            
     
             p {
@@ -55,6 +59,7 @@
     
 
     .clients-examples-container {
+
         
         ul {
             display: grid;
