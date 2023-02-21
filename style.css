@@ -1217,6 +1217,15 @@ body.page-template-default {
 	color: #1b1b1b;
 	font-family: "Mulish", sans-serif;
 }
+body.page-template-default .gear-link {
+	text-align: left;
+}
+body.page-template-default .gear-link a {
+	color: rgb(228, 91, 0);
+}
+body.page-template-default .gear-link a:visited {
+	color: rgb(228, 91, 0);
+}
 body.page-template-default .site-main {
 	overflow-y: hidden;
 	overflow-x: hidden;
@@ -1556,7 +1565,6 @@ header .custom-nav {
 	display: flex;
 	align-items: center;
 	background-color: black;
-	border: 1px solid antiquewhite;
 	padding: 0.5rem;
 	margin: 1rem;
 	border-radius: 60px;
@@ -1683,12 +1691,16 @@ section article {
 section article.featured-image {
 	margin: initial;
 }
+section article a {
+	font-family: "Mulish", sans-serif;
+}
 section article p {
 	margin: 1rem 0;
 	padding: 0 0.5rem;
 	line-height: 1.75rem;
 	font-family: "Mulish", sans-serif;
 }
+section article h1,
 section article h2 {
 	text-transform: uppercase;
 	padding: 0 0.5rem;
@@ -1697,6 +1709,7 @@ section article h2 {
 	font-family: "Mulish", sans-serif;
 	color: #1b1b1b;
 }
+section article h1::after,
 section article h2::after {
 	content: "";
 	margin: 1rem 0;
@@ -1970,6 +1983,27 @@ section article h3 {
 }
 .contact-form-section article .contact-container .contact-text-container {
 	order: 2;
+}
+.contact-form-section article .contact-container .contact-text-container p {
+	margin: 0;
+}
+.contact-form-section article .contact-container .contact-text-container p a {
+	text-decoration: underline;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: rgb(228, 91, 0);
+}
+.contact-form-section article .contact-container .contact-text-container p a:visited {
+	color: rgb(228, 91, 0);
+}
+.contact-form-section article .contact-container .contact-text-container .gear-link {
+	text-align: left;
+}
+.contact-form-section article .contact-container .contact-text-container .gear-link a {
+	color: rgb(228, 91, 0);
+}
+.contact-form-section article .contact-container .contact-text-container .gear-link a:visited {
+	color: rgb(228, 91, 0);
 }
 .contact-form-section article .contact-container .form-container label {
 	font-weight: normal;

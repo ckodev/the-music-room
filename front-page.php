@@ -264,6 +264,7 @@ get_header();
 							if (get_field('contact_heading')) {
 								?>
 								<h2><?php the_field('contact_heading'); ?></h2>
+
 								<?php
 							}
 							if (get_field('contact_sub_heading')) {
@@ -274,6 +275,7 @@ get_header();
 							if (get_field('contact_text')) {
 								?>
 								<p><?php the_field('contact_text'); ?></p>
+								<p class="gear-link"><a  href="<?php echo get_permalink(220) ?>">Gear List</a></p>
 								<?php
 							}
 							?>

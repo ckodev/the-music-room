@@ -12,6 +12,27 @@
 
             .contact-text-container {
                 order: 2;
+                p {
+                    margin: 0;
+                    a {
+                        text-decoration: underline;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        color: $tmr-focus;
+                        &:visited {
+                            color: $tmr-focus;
+                        }
+                    }
+                }
+                .gear-link {
+                    text-align: left;
+                    a {
+                        color: $tmr-focus;
+                        &:visited {
+                            color: $tmr-focus;
+                        }  
+                    }
+                }
             }
             .form-container {
 

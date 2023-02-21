@@ -7,6 +7,16 @@ body.page-template-default {
 	color: $tmr-typography;
 	font-family: $tmr-font-primary;
 
+	.gear-link {
+		text-align: left;
+		a {
+			color: $tmr-focus;
+			&:visited {
+				color: $tmr-focus;
+			}  
+		}
+	}
+
 	
 
 	.site-main {

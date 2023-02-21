@@ -188,7 +188,7 @@ add_action( 'wp_enqueue_scripts', 'tmr_scripts' );
  */
 function tmr_post_filter( $use_block_editor, $post ) {
     // Change the integer in array to your Page ID
-    $page_ids = array( 11, 34, 20, 3, 31 );
+    $page_ids = array( 11, 34, 20, 3, 31, 220 );
     if ( in_array( $post->ID, $page_ids ) ) {
         return false;
     } else {
