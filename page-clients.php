@@ -22,47 +22,13 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/page-hero' );
-	
-		$args = array(  
-				'post_type' 	 => 'tmr-client',
-				'post_status'    => 'publish',
-				'posts_per_page' => -1, 
-				'orderby'        => 'title', 
-				'order' 		 => 'ASC', 
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'tmr-client-type',
-						'field' => 'slug',
-						'terms' => array('artist', 'adr', 'engineer', 'podcast'),
-					)
-				)
-			);
+			
+			if (function_exists('get_fields')) {
+				if (get_field('soundcloud_embed')) {
+					the_field('soundcloud_embed');
+				}
+			}
 
-			$loop = new WP_Query( $args ); 
-			$terms = get_terms( 
-				array(
-					'taxonomy' => 'tmr-client-type',
-				) 
-			);
-
-			while ( $loop->have_posts() ) : $loop->the_post();
-				?>
-					<article>
-					<h2><?php the_title(); ?></h2>
-					<?php 
-						$terms = get_the_terms( get_the_ID(), 'tmr-client-type' );
-							if ( $terms && ! is_wp_error( $terms ) ) : 
-								foreach ( $terms as $term ) {
-									?>
-									<p><?php echo $term->name; ?></p>
-									<?php
-								}
-							endif;
-					?>		 
-					</article> 
-				<?php	
-			endwhile;
-			wp_reset_postdata(); 
 
 		endwhile; // End of the loop.
 		?>

@@ -84,9 +84,8 @@ get_header();
 											<span class="custom-show-text"><?php the_field('bio'); ?></span>
 
 											<button class="read-more-button">[Read More...]</button>
-											
-											
 										</div>
+										<p class="gear-link"><a  href="<?php echo get_permalink(220) ?>">Gear List</a></p>
 									<?php
 									}
 									?>
@@ -275,7 +274,6 @@ get_header();
 							if (get_field('contact_text')) {
 								?>
 								<p><?php the_field('contact_text'); ?></p>
-								<p class="gear-link"><a  href="<?php echo get_permalink(220) ?>">Gear List</a></p>
 								<?php
 							}
 							?>

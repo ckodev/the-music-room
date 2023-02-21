@@ -24,15 +24,7 @@
                         }
                     }
                 }
-                .gear-link {
-                    text-align: left;
-                    a {
-                        color: $tmr-focus;
-                        &:visited {
-                            color: $tmr-focus;
-                        }  
-                    }
-                }
+                
             }
             .form-container {
 
@@ -62,7 +54,7 @@
                         input {
                             background: $tmr-input-fill;
                             border: none;
-                            color: $tmr-light-text;
+                            color: $tmr-input-text;
                             max-width: 100%;
                             @include borderRadiusLight;
     
@@ -92,12 +84,12 @@
                         justify-content: flex-end;
     
                         button {
-                            background: $tmr-input-fill;
+                            background: $tmr-black;
                             border: none;
                             @include borderRadiusLight;
-                            color: antiquewhite;
+                            color: $tmr-light-fill;
                             border: 1px solid black;
-                            transition: all 0.5s ease;
+                            transition: all 0.2s ease;
     
                             &:hover {
                                 background-color: transparent;

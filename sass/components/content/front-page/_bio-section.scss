@@ -32,6 +32,7 @@
                         color: black;
                     }
                 }
+
                 .read-more-button {
                     display: block;
                     margin: 0 auto;
@@ -71,6 +72,19 @@
 
             .name-titles-container {
                 order: 2;
+
+                .gear-link {
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    margin-bottom: 0;
+                    a {
+                        color: $tmr-focus;
+                        &:visited {
+                            color: $tmr-focus;
+                        }  
+                    }
+                }
                 .bio-name {
                     margin: 0;
                 }

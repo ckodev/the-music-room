@@ -25,7 +25,10 @@ get_header();
             ?><section class="gear-container">
                 <article>
                 <?php the_title('<h1 class="page-title">', '</h1>'); ?>
-                <p class="gear-link"><a href="<?php echo home_url() . '/#contact' ?>">BACK</a></p>
+                <div class="cta-buttons">
+                    <p class="gear-link"><a href="<?php echo home_url() . '/#bio' ?>">BACK</a></p>
+                    <p class="gear-link button"><a href="<?php echo home_url() . '/#contact' ?>">BOOK NOW</a></p>
+                </div>
                 <?php
                 if (function_exists('get_fields')) {
 				    if (get_field('gear')) {
