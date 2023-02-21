@@ -13,21 +13,48 @@
 
         .grid-container {
             .bio-text {
-                img {
-                    margin: 0rem auto 1rem auto;
-                    width: 100%;
-                    display: block;
-                    object-fit: cover;
-                    max-height: 25rem;
-                    object-position: 50% 30%;
-                    @include borderRadiusMedium;
-                    @include largeTabletQuery {
-                        margin-left: 1.5rem;
-                        width: 45%;
-                        float: right;
-                        max-height: 37rem;
+                margin-top: 1rem;
+                @include desktopQuery {
+                    column-count: 2;
+                    column-gap: 2rem;
+                    padding: 1rem;
+                }
+                
+                p {
+                    text-align: justify;
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    text-indent: 2rem;
+                }
+                a {
+                    color: black;
+                    &:visited {
+                        color: black;
                     }
-                    
+                }
+
+                .read-more-button {
+                    display: block;
+                    margin: 0 auto;
+                    background: none;
+                    border: none;
+                    color: $tmr-focus;
+                    cursor: pointer;
+                    @include desktopQuery {
+                        display: none;
+                    }
+                }
+                .custom-excerpt {
+                    display: block;
+                    @include desktopQuery {
+                        display: none;
+                    }
+                }
+                .custom-show-text {
+                    display: none;
+                    @include desktopQuery {
+                        display: block;
+                    }
                 }
             }
 
@@ -45,11 +72,47 @@
 
             .name-titles-container {
                 order: 2;
+
+                .gear-link {
+                    text-align: center;
+                    text-transform: uppercase;
+                    text-decoration: underline;
+                    margin-bottom: 0;
+                    a {
+                        color: $tmr-focus;
+                        &:visited {
+                            color: $tmr-focus;
+                        }  
+                    }
+                }
                 .bio-name {
                     margin: 0;
                 }
                 .bio-titles {
                     margin: 0;
+                }
+
+                @include desktopQuery {
+                    padding: 0 3rem;
+                }
+                img {
+                    margin: 2rem auto;
+                    width: 100%;
+                    display: block;
+                    -o-object-fit: cover;
+                    object-fit: cover;
+                    max-height: 14rem;
+                    -o-object-position: 50% 30%;
+                    object-position: 50% 30%;
+                    border-radius: 9px;
+                    min-height: 25vh;
+                    box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                    @include largeTabletQuery {
+                        max-height: 25rem;
+                        min-height: 25vh;
+
+                    }
+                    
                 }
             }
             

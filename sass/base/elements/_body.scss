@@ -1,17 +1,54 @@
-body.page-template-default {
-	// * {
-	// 	border: 1px solid red !important;
-	//   }
 
+
+body.page-template-default {
 	position: relative;
 	margin: auto;
     max-width: 2000px;
 	color: $tmr-typography;
 	font-family: $tmr-font-primary;
 
+
+
+
+	
+
 	.site-main {
 		overflow-y: hidden;
 		overflow-x: hidden;
+		background-color: antiquewhite;
+
+		.gear-container {
+			article {
+				.cta-buttons {
+					display: flex;
+					align-items: center;
+					.gear-link {
+						text-align: center;
+						text-transform: uppercase;
+						text-decoration: underline;
+						margin: 0;
+						
+						
+						a {
+							color: $tmr-focus;
+							&:visited {
+								color: $tmr-focus;
+							}  
+						}
+						&.button {
+							padding: .5rem 1rem;
+							background-color: black;
+							border-radius: 5px;
+							text-decoration: initial;
+							margin-left: 1rem;
+						}
+					}
+				}
+				
+			}
+		}
+
+		
 		
 	}
 	.site-header {

@@ -15,6 +15,9 @@ section {
         &.featured-image {
             margin: initial;
         }
+        a {
+            font-family: $tmr-font-primary; 
+        }
 
         p {
             margin: 1rem 0;
@@ -23,6 +26,7 @@ section {
             font-family: $tmr-font-primary;
         }
 
+        h1,
         h2 {
             text-transform: uppercase;
             padding: 0 .5rem;

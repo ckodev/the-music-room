@@ -159,6 +159,7 @@ function tmr_scripts() {
 	}
 	// Custom Nav Script
 	wp_enqueue_script( 'tmr-custom-nav', get_template_directory_uri() . '/js/custom-nav.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'tmr-custom', get_template_directory_uri() . '/js/custom.js', array(), _S_VERSION );
 
 	// animate on scroll
 	wp_enqueue_script( 'tmr-AOS','https://unpkg.com/aos@2.3.4/dist/aos.js', array(), _S_VERSION, true );
@@ -172,6 +173,8 @@ function tmr_scripts() {
 	wp_enqueue_style( 'montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet', array(), null ); 
 	// google font Outfit
 	wp_enqueue_style( 'Outfit', 'https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet', array(), null ); 
+	// google font Abyssinica
+	wp_enqueue_style( 'Outfit', 'https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet', array(), null ); 
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -185,7 +188,7 @@ add_action( 'wp_enqueue_scripts', 'tmr_scripts' );
  */
 function tmr_post_filter( $use_block_editor, $post ) {
     // Change the integer in array to your Page ID
-    $page_ids = array( 11, 34, 20, 3, 31 );
+    $page_ids = array( 11, 34, 20, 3, 31, 220 );
     if ( in_array( $post->ID, $page_ids ) ) {
         return false;
     } else {
@@ -193,6 +196,14 @@ function tmr_post_filter( $use_block_editor, $post ) {
     }
 }
 add_filter( 'use_block_editor_for_post', 'tmr_post_filter', 10, 2 );
+
+function custom_add_status_bar_meta_tag() {
+	echo '<meta name="theme-color" content="antiquewhite">' . "\n";
+}
+add_action( 'wp_head', 'custom_add_status_bar_meta_tag' );
+  
+  
+  
 
 /**
  * Implement the Custom Header feature.

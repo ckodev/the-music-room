@@ -28,7 +28,7 @@
 	<header id="masthead" class="site-header">
 	<h1 class="page-title screen-reader-text"><?php the_title(); ?></h1>
 		<div class="header-nav-container">
-            <nav id="custom-nav" class="custom-nav">
+        <nav id="custom-nav" class="custom-nav" <?php if ( get_the_ID() == 220 ) { echo 'style="display:none;"'; } ?>>
                         <ul id="custom-nav-container" class="custom-nav-container">
                             <li class="nav-items"><div class="flex-box">
                                 <a href="#bio">
